@@ -1,0 +1,8 @@
+QuoteParity demonstration fixture — Budget Devices (fictional supplier)
+Quote ID: BUDGET-2026-001
+Currency: USD. Quantity: 10 new business laptops with 16 GB RAM and 512 GB SSD.
+Unit laptop price: $800.00 (80000 cents). Tax: $0.00.
+Delivery: EXCLUDED. Buyer must collect; we do not provide office delivery. Delivery price field: $0.00 (not a delivery service).
+Warranty: EXCLUDED. No parts or labour warranty is offered. Warranty price field: $0.00 (no warranty purchased).
+Collection availability: 3 days. Total quoted laptop price: $8,000.00.
+This is a synthetic test document, not a real offer or purchase commitment.

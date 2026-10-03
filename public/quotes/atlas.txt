@@ -1,0 +1,10 @@
+QuoteParity demonstration fixture — Atlas Supply (fictional supplier)
+Quote ID: ATLAS-2026-001
+Currency: USD. All prices below are in dollars.
+Quantity: 10 new business laptops. Each has at least 16 GB RAM and 512 GB SSD.
+Unit laptop price: $900.00 (90000 cents).
+Delivery: Included at no extra cost ($0.00). Delivery to the buyer's office within 7 days.
+Warranty: 24-month parts and labour warranty included at no extra cost ($0.00).
+Tax: $0.00. No other fees, exclusions, mandatory extras, or surcharges.
+Total payable for 10 laptops, delivery and warranty: $9,000.00.
+This is a synthetic test document, not a real offer or purchase commitment.

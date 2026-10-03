@@ -1,0 +1,9 @@
+{
+  "network": "studionet",
+  "chainId": 61999,
+  "address": "0xEE11429C43dA330BEdb61b8dABABE4C3BAF542F7",
+  "liveRun": null,
+  "deploymentTx": "0x36b560d48ada59ec61ac1064bf9726953a0ed5269275458225f939a361ec1e15",
+  "studio": "https://studio.genlayer.com",
+  "deployedAt": "2026-10-03"
+}

@@ -1,0 +1,9 @@
+QuoteParity demonstration fixture — Meridian Systems (fictional supplier)
+Quote ID: MERIDIAN-2026-001
+Currency: USD. Quantity: 10 new business laptops. At least 16 GB RAM and 512 GB SSD per laptop.
+Unit laptop price: $880.00 (88000 cents).
+Delivery to the buyer's office within 5 days: $150.00 total for the order (15000 cents).
+24-month parts and labour warranty: $100.00 total for the order (10000 cents), purchased with this quote.
+Tax: $0.00. No other fees, exclusions, surcharges, or mandatory extras.
+Total payable for 10 laptops, office delivery and 24-month warranty: $9,050.00.
+This is a synthetic test document, not a real offer or purchase commitment.
