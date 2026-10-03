@@ -22,7 +22,7 @@ def consensus(leader, validator):
     if not validator(Return(result)): raise UserError('consensus disagreement')
     return result
 
-gl = NS(Contract=object, public=Public(), message=NS(sender_address='buyer', datetime=datetime.fromtimestamp(1000,timezone.utc)),
+gl = NS(Contract=object, public=Public(), message=NS(sender_address='buyer'), message_raw={'datetime':datetime.fromtimestamp(1000,timezone.utc).isoformat()},
         vm=NS(UserError=UserError, Return=Return, run_nondet_unsafe=consensus),
         eq_principle=NS(strict_eq=lambda f:f()), nondet=NS(web=NS(get=get),exec_prompt=lambda *a,**k:dict(model)))
 sys.modules['genlayer'] = types.ModuleType('genlayer'); sys.modules['genlayer'].gl=gl
@@ -34,7 +34,7 @@ class ContractTests(unittest.TestCase):
         model.update(scope=['covered','covered'],prices_match=True)
         self.c=module.QuoteParity()
         self.c.create_request('Laptop supply',json.dumps(['Delivery included','24 month warranty']),10,'USD',1100,100)
-    def time(self,t): gl.message.datetime=datetime.fromtimestamp(t,timezone.utc)
+    def time(self,t): gl.message_raw['datetime']=datetime.fromtimestamp(t,timezone.utc).isoformat()
     def bid(self,name='Alpha',price=10000,days=3):
         body=f'Quote {name} {price}'.encode();url=f'https://quotes.example/{name}'
         web[url]=NS(status=200,body=body)

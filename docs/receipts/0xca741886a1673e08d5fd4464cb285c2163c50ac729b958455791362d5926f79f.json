@@ -1,0 +1,66 @@
+{
+  "hash": "0xca741886a1673e08d5fd4464cb285c2163c50ac729b958455791362d5926f79f",
+  "from": "0x6fdA8D063111bC3aB3f2Df3c8f6e66d6ea8fAc4a",
+  "to": "0x52Bf9E533159ed35Bc473180b1C86908fFD67883",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      1
+    ],
+    "readable": "0"
+  },
+  "method": "{\"args\":[\"Live test · 10 business laptops\",\"[\\\"10 new laptops, each with at least 16 GB RAM and 512 GB SSD\\\",\\\"Delivery to the buyer office within 7 days\\\",\\\"24-month parts and labour warranty\\\"]\",10,\"USD\",1791051242,1000,]\"method\":\"create_request\"}",
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AAE=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            1
+          ],
+          "readable": "0"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AAE=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            1
+          ],
+          "readable": "0"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    }
+  ],
+  "votes": {
+    "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+    "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+    "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "idle",
+    "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree",
+    "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "idle"
+  },
+  "leader_only": false
+}

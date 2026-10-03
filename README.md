@@ -7,10 +7,10 @@ A buyer commits purchasing requirements, quantity, currency, deadline and a dail
 ## Deployment
 
 - Network: **GenLayer Studionet**, chain ID **61999**
-- Contract: [`0xEE11429C43dA330BEdb61b8dABABE4C3BAF542F7`](https://explorer-studio.genlayer.com/address/0xEE11429C43dA330BEdb61b8dABABE4C3BAF542F7)
-- Deployment transaction: [`0x36b560d48ada59ec61ac1064bf9726953a0ed5269275458225f939a361ec1e15`](https://explorer-studio.genlayer.com/tx/0x36b560d48ada59ec61ac1064bf9726953a0ed5269275458225f939a361ec1e15)
+- Contract: [`0x52Bf9E533159ed35Bc473180b1C86908fFD67883`](https://explorer-studio.genlayer.com/address/0x52Bf9E533159ed35Bc473180b1C86908fFD67883)
+- Deployment transaction: [`0x01b62cd94e52506650928cc53a8c64ed66f6a5f064460d070ed4fd70aec332df`](https://explorer-studio.genlayer.com/tx/0x01b62cd94e52506650928cc53a8c64ed66f6a5f064460d070ed4fd70aec332df)
 - Deployment submitted through **GenLayer Studio's built-in account**, full consensus mode. No external wallet connection.
-- Website: publication in progress. See `public/deployment.json` and `docs/live-run.json` for final evidence.
+- Website: [QuoteParity](https://quoteparity.itzanza2.chatgpt.site). Initially owner-private under Sites default access. Public source and chain evidence are accessible without this website. See `public/deployment.json` and `docs/live-run.json` for evidence.
 
 ## Workflow
 
@@ -56,11 +56,11 @@ Python 3.10+ is required for tests. The frontend uses pinned `genlayer-js@1.1.8`
 
 The deployed contract was created through Studio's built-in wallet. The website creates its own **session-only Studionet test account** using the SDK, with Studio's test faucet RPC. No external wallet connection, mainnet assets or seed phrase are requested. Keys stay in the current tab's `sessionStorage`; closing the browser session clears them. Do not use this development-only wallet for real assets. A new tab/account does not control prior buyer identities, but requests are immutable and reviews/finalization are permissionless.
 
-Writes call the real deployed contract with a local signing account, persist the transaction ID before waiting, and verify `FINALIZED` **and** `FINISHED_WITH_RETURN`. Pending IDs can be resumed rather than blindly resubmitted. Reads explicitly select `TransactionHashVariant.LATEST_FINAL`.
+Writes call the real deployed contract with a local signing account, persist the transaction ID before waiting, and verify `FINALIZED` **and** a successful execution result (`FINISHED_WITH_RETURN` on protocol receipts or `SUCCESS` with a return result on stable Studio receipts). Pending IDs can be resumed rather than blindly resubmitted. Reads explicitly select `TransactionHashVariant.LATEST_FINAL`.
 
 ## Tests
 
-`npm test` runs deterministic Python contract tests with an SDK-shaped harness. Tests cover creation → submission → qualification → final ranking, exclusions, price mismatch, unavailable/changed sources, hash mismatch, deadlines, bounded retries, no post-finalization changes, duplicate limits, integer validation, formula arithmetic and tie-breaking. These mock tests do **not** execute GenVM or establish LLM accuracy. The live Studionet run is separately documented under `docs/` with real transaction receipts and finalized-state reads.
+`npm test` runs 15 deterministic Python contract tests with an SDK-shaped harness plus 6 frontend/receipt tests using JSDOM. Tests cover creation → submission → qualification → final ranking, exclusions, price mismatch, unavailable/changed sources, hash mismatch, deadlines, bounded retries, no post-finalization changes, duplicate limits, integer validation, formula arithmetic and tie-breaking. These mock tests do **not** execute GenVM or establish LLM accuracy. Frontend tests verify finalized-state reads, signed write construction, evidence display, cancelled-validator handling, rejection of a real failed receipt, and exact cents in large integer totals. Browser visual QA was unavailable because the managed preview browser skill was not available. The live Studionet run is separately documented under `docs/` with real transaction receipts and finalized-state reads.
 
 ## API
 
@@ -82,3 +82,7 @@ Writes call the real deployed contract with a local signing account, persist the
 - [Studio](https://docs.genlayer.com/developers/intelligent-contracts/tools/genlayer-studio)
 
 The public quote fixtures in `public/quotes/` are explicitly fictional test evidence, not real supplier offers.
+
+## Verified live result
+
+Seven successful full-consensus transactions finalized on the corrected deployment: deployment, request creation, two submissions, two scope reviews and final ranking. Atlas qualified (all three requirements covered); Budget was rejected (delivery and warranty excluded). Ranking: `[0]`, Atlas score **$9,070.00** including the committed delivery-time cost. A separate late Meridian bid rolled back with `bidding closed`. See [live-run report](docs/live-run.json), [finalized state](docs/finalized-state.json), [Studio screenshot](docs/studio-proof.jpg), and [submission copy](docs/SUBMISSION.md).

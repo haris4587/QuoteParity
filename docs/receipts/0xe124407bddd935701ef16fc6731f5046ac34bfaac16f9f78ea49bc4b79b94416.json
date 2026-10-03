@@ -1,0 +1,66 @@
+{
+  "hash": "0xe124407bddd935701ef16fc6731f5046ac34bfaac16f9f78ea49bc4b79b94416",
+  "from": "0x6fdA8D063111bC3aB3f2Df3c8f6e66d6ea8fAc4a",
+  "to": "0x52Bf9E533159ed35Bc473180b1C86908fFD67883",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      1
+    ],
+    "readable": "0"
+  },
+  "method": "{\"args\":[0,\"Atlas Supply (test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/17e07f30f0a89a5bad90ba40bf9e80613f33b271/public/quotes/atlas.txt\",\"6447b220ca6d48ceb7d1334588e4982477bcd3eb8677a3f75e0ffb0cd6fd4eef\",90000,0,0,0,7,]\"method\":\"submit_quote\"}",
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AAE=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            1
+          ],
+          "readable": "0"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AAE=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            1
+          ],
+          "readable": "0"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    }
+  ],
+  "votes": {
+    "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+    "0x4404Fb70d490c935758146f42A73DC850FF95C71": "idle",
+    "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "agree",
+    "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "idle",
+    "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+  },
+  "leader_only": false
+}

@@ -1,0 +1,66 @@
+{
+  "hash": "0x78278a4ef170e02407921f62f70ed1352226ad46ce3868c621e3c244b79c30e5",
+  "from": "0x6fdA8D063111bC3aB3f2Df3c8f6e66d6ea8fAc4a",
+  "to": "0x52Bf9E533159ed35Bc473180b1C86908fFD67883",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      9
+    ],
+    "readable": "1"
+  },
+  "method": "{\"args\":[0,\"Budget Devices (test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/17e07f30f0a89a5bad90ba40bf9e80613f33b271/public/quotes/budget.txt\",\"f7f2fc0674197d52e55a716045ccde97e04b874c84aa1ff0c389f4ed1d5dba34\",80000,0,0,0,3,]\"method\":\"submit_quote\"}",
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AAk=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            9
+          ],
+          "readable": "1"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AAk=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            9
+          ],
+          "readable": "1"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    }
+  ],
+  "votes": {
+    "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+    "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "idle",
+    "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "agree",
+    "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree",
+    "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "idle"
+  },
+  "leader_only": false
+}

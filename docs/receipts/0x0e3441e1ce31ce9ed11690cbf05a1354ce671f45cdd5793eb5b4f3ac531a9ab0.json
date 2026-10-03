@@ -1,0 +1,81 @@
+{
+  "hash": "0x0e3441e1ce31ce9ed11690cbf05a1354ce671f45cdd5793eb5b4f3ac531a9ab0",
+  "from": "0x6fdA8D063111bC3aB3f2Df3c8f6e66d6ea8fAc4a",
+  "to": "0x52Bf9E533159ed35Bc473180b1C86908fFD67883",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      68,
+      114,
+      101,
+      106,
+      101,
+      99,
+      116,
+      101,
+      100
+    ],
+    "readable": "\"rejected\""
+  },
+  "method": "{\"args\":[0,1,]\"method\":\"evaluate_quote\"}",
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AERyZWplY3RlZA==",
+        "status": "return",
+        "payload": {
+          "raw": [
+            68,
+            114,
+            101,
+            106,
+            101,
+            99,
+            116,
+            101,
+            100
+          ],
+          "readable": "\"rejected\""
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "ERROR",
+      "result": {
+        "raw": "AmlkbGU=",
+        "status": "contract_error",
+        "payload": "idle"
+      },
+      "genvm_result": {
+        "stderr": "Validator execution cancelled after quorum",
+        "stdout": "",
+        "raw_error": {
+          "fatal": false,
+          "causes": [
+            "VALIDATOR_QUORUM_REACHED"
+          ]
+        },
+        "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+      }
+    }
+  ],
+  "votes": {
+    "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+    "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+    "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+    "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "idle",
+    "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "disagree"
+  },
+  "leader_only": false
+}

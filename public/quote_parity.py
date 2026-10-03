@@ -2,6 +2,8 @@
 from genlayer import *
 import json
 import hashlib
+import calendar
+from datetime import datetime, timezone
 
 
 def pack(value):
@@ -42,7 +44,8 @@ class QuoteParity(gl.Contract):
         self.database = pack({'requests': []})
 
     def _now(self):
-        return int(gl.message.datetime.timestamp())
+        timestamp = datetime.fromisoformat(gl.message_raw['datetime'].replace('Z', '+00:00'))
+        return calendar.timegm(timestamp.astimezone(timezone.utc).utctimetuple())
 
     def _load(self, request_id):
         db = json.loads(self.database)
