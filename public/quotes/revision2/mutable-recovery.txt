@@ -8,3 +8,5 @@ Delivery or collection duration: 7 days.
 Delivery to the buyer office within 7 days and a 24-month parts and labour warranty are included at no extra cost.
 
 Revision marker: content intentionally changed after the on-chain SHA-256 commitment for a live failure-handling test.
+
+Second revision marker: changed after request 2 admission; cannot match its committed evidence hash.
