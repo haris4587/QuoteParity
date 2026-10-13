@@ -1,0 +1,90 @@
+{
+  "hash": "0xd8c1c5a67f1d89262e291f661c49c728cd3abc2239745e99557c1f8fe5cc82db",
+  "from": "0x566434F7D0ae1dd6A1565D833463be1c3ed65241",
+  "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      68,
+      114,
+      101,
+      106,
+      101,
+      99,
+      116,
+      101,
+      100
+    ],
+    "readable": "\"rejected\""
+  },
+  "method": "{\"args\":[0,4,]\"method\":\"evaluate_quote\"}",
+  "leader_only": false,
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AERyZWplY3RlZA==",
+        "status": "return",
+        "payload": {
+          "raw": [
+            68,
+            114,
+            101,
+            106,
+            101,
+            99,
+            116,
+            101,
+            100
+          ],
+          "readable": "\"rejected\""
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AERyZWplY3RlZA==",
+        "status": "return",
+        "payload": {
+          "raw": [
+            68,
+            114,
+            101,
+            106,
+            101,
+            99,
+            116,
+            101,
+            100
+          ],
+          "readable": "\"rejected\""
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    }
+  ],
+  "votes": {
+    "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+    "0x4404Fb70d490c935758146f42A73DC850FF95C71": "disagree",
+    "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+    "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+    "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree"
+  }
+}

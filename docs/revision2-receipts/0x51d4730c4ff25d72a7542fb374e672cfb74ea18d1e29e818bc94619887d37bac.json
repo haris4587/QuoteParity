@@ -1,0 +1,93 @@
+{
+  "hash": "0x51d4730c4ff25d72a7542fb374e672cfb74ea18d1e29e818bc94619887d37bac",
+  "from": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+  "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      76,
+      113,
+      117,
+      97,
+      108,
+      105,
+      102,
+      105,
+      101,
+      100
+    ],
+    "readable": "\"qualified\""
+  },
+  "method": "{\"args\":[2,0,]\"method\":\"evaluate_quote\"}",
+  "leader_only": false,
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AExxdWFsaWZpZWQ=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            76,
+            113,
+            117,
+            97,
+            108,
+            105,
+            102,
+            105,
+            101,
+            100
+          ],
+          "readable": "\"qualified\""
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AExxdWFsaWZpZWQ=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            76,
+            113,
+            117,
+            97,
+            108,
+            105,
+            102,
+            105,
+            101,
+            100
+          ],
+          "readable": "\"qualified\""
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    }
+  ],
+  "votes": {
+    "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+    "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+    "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "agree",
+    "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "idle",
+    "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "idle"
+  }
+}

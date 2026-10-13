@@ -1,0 +1,51 @@
+{
+  "hash": "0xec93ec9305e5221d183d4bd6401366e89a44a2f962d61027ff6837e013544bdb",
+  "from": "0x806Da6e785769F0Ee8edE708A69e4259eF2992C6",
+  "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+  "status": "FINALIZED",
+  "successful": false,
+  "execution": "document changed or incorrect hash",
+  "method": "{\"args\":[2,\"Fast (unverified fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/22bed3b6b01d98145900ec70cb5f552fea2bfbc4/public/quotes/revision2/fast.txt\",\"57767c19b9226ca8b1cfb534a9c2e64a4e52959a80224b13f7ca45048bb1d4ad\",90000,0,0,0,5,]\"method\":\"submit_quote\"}",
+  "leader_only": false,
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "ERROR",
+      "result": {
+        "raw": "AWRvY3VtZW50IGNoYW5nZWQgb3IgaW5jb3JyZWN0IGhhc2g=",
+        "status": "rollback",
+        "payload": "document changed or incorrect hash"
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "ERROR",
+      "result": {
+        "raw": "AWRvY3VtZW50IGNoYW5nZWQgb3IgaW5jb3JyZWN0IGhhc2g=",
+        "status": "rollback",
+        "payload": "document changed or incorrect hash"
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    }
+  ],
+  "votes": {
+    "0x4404Fb70d490c935758146f42A73DC850FF95C71": "idle",
+    "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+    "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+    "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+    "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree"
+  }
+}

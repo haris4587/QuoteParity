@@ -25,7 +25,10 @@ def bounded_int(value, minimum, maximum):
 
 def fetch_document(url):
     # Declared SDK Response uses status, not status_code.
-    response = gl.nondet.web.get(url)
+    try:
+        response = gl.nondet.web.get(url)
+    except Exception:
+        return {'error': 'source_unavailable'}
     if response.status != 200 or response.body is None:
         return {'error': 'source_unavailable'}
     if not 1 <= len(response.body) <= 32000:
@@ -62,7 +65,7 @@ class QuoteParity(gl.Contract):
         return pack(request)
 
     @gl.public.write
-    def create_request(self, title: str, requirements_json: str, quantity: int, currency: str, deadline: int, daily_penalty: int) -> int:
+    def create_request(self, title: str, requirements_json: str, quantity: int, currency: str, deadline: int, daily_penalty: int, supplier_wallets_json: str) -> int:
         require(1 <= len(title) <= 120, 'title length')
         require(len(requirements_json) <= 6000, 'requirements size')
         requirements = json.loads(requirements_json)
@@ -73,15 +76,28 @@ class QuoteParity(gl.Contract):
         require(len(currency) == 3 and currency.isalpha() and currency == currency.upper(), 'three-letter currency required')
         bounded_int(deadline, self._now() + 30, self._now() + 2592000)
         bounded_int(daily_penalty, 0, 10**12)
+        require(len(supplier_wallets_json) <= 1000, 'supplier roster size')
+        try:
+            wallets = json.loads(supplier_wallets_json)
+        except (ValueError, TypeError):
+            raise gl.vm.UserError('invalid supplier roster JSON')
+        require(type(wallets) is list and 1 <= len(wallets) <= 20, 'invite 1-20 supplier wallets')
+        require(all(type(x) is str and len(x) == 42 and x.startswith('0x') and all(c in '0123456789abcdefABCDEF' for c in x[2:]) for x in wallets), 'invalid supplier wallet')
+        wallets = [x.lower() for x in wallets]
+        require(len(set(wallets)) == len(wallets), 'duplicate supplier wallet')
+        require('0x' + '0' * 40 not in wallets, 'zero supplier wallet')
+        require(str(gl.message.sender_address).lower() not in wallets, 'buyer cannot be supplier')
         db = json.loads(self.database)
         require(len(db['requests']) < 100, 'request capacity')
         request_id = len(db['requests'])
         terms = {'title': title, 'requirements': requirements, 'quantity': quantity, 'currency': currency,
                  'deadline': deadline, 'review_deadline': deadline + 86400, 'daily_penalty': daily_penalty,
                  'formula': 'quantity*unit_price+delivery+warranty+tax+daily_penalty*delivery_days',
-                 'tie_break': 'score,landed_cost,delivery_days,bid_id', 'buyer': str(gl.message.sender_address)}
+                 'tie_break': 'score,landed_cost,delivery_days,bid_id', 'supplier_wallets': wallets,
+                 'identity_policy': 'unverified_supplier_claim', 'admission_policy': 'immutable_buyer_invited_wallets_reserved_slots',
+                 'buyer': str(gl.message.sender_address).lower()}
         request = dict(terms)
-        request.update({'id': request_id, 'terms_hash': digest(pack(terms)), 'bids': [], 'closed': False, 'ranking': []})
+        request.update({'id': request_id, 'terms_hash': digest(pack(terms)), 'bids': [], 'closed': False, 'ranking': [], 'active_bids': {}})
         db['requests'].append(request)
         self.database = pack(db)
         return request_id
@@ -90,7 +106,9 @@ class QuoteParity(gl.Contract):
     def submit_quote(self, request_id: int, supplier: str, url: str, expected_hash: str, unit_price: int, delivery: int, warranty: int, tax: int, delivery_days: int) -> int:
         db, request = self._load(request_id)
         require(not request['closed'] and self._now() < request['deadline'], 'bidding closed')
-        require(len(request['bids']) < 20, 'bid capacity')
+        sender = str(gl.message.sender_address).lower()
+        require(sender in request['supplier_wallets'], 'supplier wallet not invited')
+        require(sum(1 for x in request['bids'] if x['sender'] == sender) < 3, 'maximum three bids per invited wallet')
         require(1 <= len(supplier) <= 100, 'supplier length')
         require(url.startswith('https://') and len(url) <= 1000 and '@' not in url, 'public HTTPS URL required')
         require(len(expected_hash) == 64 and all(x in '0123456789abcdef' for x in expected_hash), 'SHA-256 required')
@@ -98,20 +116,24 @@ class QuoteParity(gl.Contract):
             bounded_int(value, 0, 10**12)
         require(unit_price > 0, 'unit price must be positive')
         bounded_int(delivery_days, 0, 365)
-        sender = str(gl.message.sender_address)
-        require(sum(1 for x in request['bids'] if x['sender'] == sender) < 3, 'maximum three bids per address')
-        require(not any(x['url'] == url or x['document_hash'] == expected_hash for x in request['bids']), 'duplicate document')
-        snapshot = gl.eq_principle.strict_eq(lambda: fetch_document(url))
+        require(not any(x['sender'] == sender and x['document_hash'] == expected_hash for x in request['bids']), 'duplicate document for this wallet')
+        def snapshot_quote():
+            return fetch_document(url)
+        snapshot = gl.eq_principle.strict_eq(snapshot_quote)
         require('error' not in snapshot, snapshot.get('error', 'source unavailable'))
         require(snapshot['hash'] == expected_hash, 'document changed or incorrect hash')
         bid_id = len(request['bids'])
         landed = request['quantity'] * unit_price + delivery + warranty + tax
-        bid = {'id': bid_id, 'supplier': supplier, 'sender': sender, 'url': url, 'document_hash': expected_hash,
+        prior = request['active_bids'].get(sender)
+        if prior is not None:
+            request['bids'][prior]['superseded_by'] = bid_id
+        bid = {'id': bid_id, 'identity_status': 'unverified_supplier_claim', 'superseded_by': None, 'supplier': supplier, 'sender': sender, 'url': url, 'document_hash': expected_hash,
                'unit_price': unit_price, 'delivery': delivery, 'warranty': warranty, 'tax': tax,
                'delivery_days': delivery_days, 'landed_cost': landed,
                'score': landed + request['daily_penalty'] * delivery_days,
                'status': 'pending', 'history': [], 'submitted_at': self._now()}
         request['bids'].append(bid)
+        request['active_bids'][sender] = bid_id
         self.database = pack(db)
         return bid_id
 
@@ -121,6 +143,7 @@ class QuoteParity(gl.Contract):
         require(not request['closed'] and self._now() <= request['review_deadline'], 'review closed')
         bounded_int(bid_id, 0, len(request['bids']) - 1)
         bid = request['bids'][bid_id]
+        require(bid['superseded_by'] is None, 'quote superseded')
         require(bid['status'] in ['pending', 'inconclusive'] and len(bid['history']) < 3, 'review already complete or retries exhausted')
         requirements = request['requirements']
         expected = {k: bid[k] for k in ['unit_price', 'delivery', 'warranty', 'tax', 'delivery_days']}
@@ -141,9 +164,17 @@ class QuoteParity(gl.Contract):
                       'Zero means included/free or explicitly no tax. No unstated fees may be omitted. '
                       'Return JSON only: {"scope":["covered"|"excluded"|"unclear",...],"prices_match":true|false}. '
                       'No explanations or other keys. EVIDENCE=' + pack({'requirements': requirements, 'prices': expected, 'document': source['text']}))
-            raw = gl.nondet.exec_prompt(prompt, response_format='json')
-            value = json.loads(raw) if type(raw) is str else raw
-            if (type(value) is not dict or type(value.get('scope')) is not list or len(value['scope']) != len(requirements)
+            try:
+                raw = gl.nondet.exec_prompt(prompt, response_format='json')
+            except Exception:
+                return {'scope': ['unclear'] * len(requirements), 'prices_match': False, 'source': 'model_unavailable'}
+            try:
+                if type(raw) is str and len(raw) > 4000:
+                    return {'scope': ['unclear'] * len(requirements), 'prices_match': False, 'source': 'invalid_model_output'}
+                value = json.loads(raw) if type(raw) is str else raw
+            except (ValueError, TypeError):
+                return {'scope': ['unclear'] * len(requirements), 'prices_match': False, 'source': 'invalid_model_output'}
+            if (type(value) is not dict or set(value) != {'scope', 'prices_match'} or type(value.get('scope')) is not list or len(value['scope']) != len(requirements)
                 or any(x not in ['covered', 'excluded', 'unclear'] for x in value['scope']) or type(value.get('prices_match')) is not bool):
                 return {'scope': ['unclear'] * len(requirements), 'prices_match': False, 'source': 'invalid_model_output'}
             return {'scope': value['scope'], 'prices_match': value['prices_match'], 'source': 'unchanged'}
@@ -173,9 +204,10 @@ class QuoteParity(gl.Contract):
         db, request = self._load(request_id)
         require(not request['closed'], 'already closed')
         require(self._now() >= request['deadline'], 'bid deadline has not passed')
-        unresolved = any(x['status'] in ['pending', 'inconclusive'] and len(x['history']) < 3 for x in request['bids'])
+        active = [x for x in request['bids'] if x['superseded_by'] is None]
+        unresolved = any(x['status'] in ['pending', 'inconclusive'] and len(x['history']) < 3 for x in active)
         require(not unresolved or self._now() > request['review_deadline'], 'unresolved quotes remain in review window')
-        eligible = [x for x in request['bids'] if x['status'] == 'qualified']
+        eligible = [x for x in active if x['status'] == 'qualified']
         eligible.sort(key=lambda x: (x['score'], x['landed_cost'], x['delivery_days'], x['id']))
         request['ranking'] = [x['id'] for x in eligible]
         request['closed'] = True

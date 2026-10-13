@@ -1,0 +1,99 @@
+{
+  "requests": [
+    {
+      "bids": [
+        {
+          "delivery": 0,
+          "delivery_days": 7,
+          "document_hash": "6447b220ca6d48ceb7d1334588e4982477bcd3eb8677a3f75e0ffb0cd6fd4eef",
+          "history": [
+            {
+              "decision_hash": "d420ad96c6c13191ffbc9e74856245e8abfa32f1aa7ece4d5dce7debbd0224b9",
+              "document_hash": "6447b220ca6d48ceb7d1334588e4982477bcd3eb8677a3f75e0ffb0cd6fd4eef",
+              "evaluated_at": 1791051357,
+              "result": {
+                "prices_match": true,
+                "scope": [
+                  "covered",
+                  "covered",
+                  "covered"
+                ],
+                "source": "unchanged"
+              },
+              "status": "qualified",
+              "terms_hash": "3e866343aa35ca8b00f533ff45a5e0dde9fd1a29c80f9b8162ff56fe4bf7e2f4"
+            }
+          ],
+          "id": 0,
+          "landed_cost": 900000,
+          "score": 907000,
+          "sender": "0x6fdA8D063111bC3aB3f2Df3c8f6e66d6ea8fAc4a",
+          "status": "qualified",
+          "submitted_at": 1791051142,
+          "supplier": "Atlas Supply (test fixture)",
+          "tax": 0,
+          "unit_price": 90000,
+          "url": "https://raw.githubusercontent.com/haris4587/QuoteParity/17e07f30f0a89a5bad90ba40bf9e80613f33b271/public/quotes/atlas.txt",
+          "warranty": 0
+        },
+        {
+          "delivery": 0,
+          "delivery_days": 3,
+          "document_hash": "f7f2fc0674197d52e55a716045ccde97e04b874c84aa1ff0c389f4ed1d5dba34",
+          "history": [
+            {
+              "decision_hash": "ab40b88661de72783f6cb5ae247254a399434635cf198d8b6c37e8175d12b4a2",
+              "document_hash": "f7f2fc0674197d52e55a716045ccde97e04b874c84aa1ff0c389f4ed1d5dba34",
+              "evaluated_at": 1791051473,
+              "result": {
+                "prices_match": true,
+                "scope": [
+                  "covered",
+                  "excluded",
+                  "excluded"
+                ],
+                "source": "unchanged"
+              },
+              "status": "rejected",
+              "terms_hash": "3e866343aa35ca8b00f533ff45a5e0dde9fd1a29c80f9b8162ff56fe4bf7e2f4"
+            }
+          ],
+          "id": 1,
+          "landed_cost": 800000,
+          "score": 803000,
+          "sender": "0x6fdA8D063111bC3aB3f2Df3c8f6e66d6ea8fAc4a",
+          "status": "rejected",
+          "submitted_at": 1791051192,
+          "supplier": "Budget Devices (test fixture)",
+          "tax": 0,
+          "unit_price": 80000,
+          "url": "https://raw.githubusercontent.com/haris4587/QuoteParity/17e07f30f0a89a5bad90ba40bf9e80613f33b271/public/quotes/budget.txt",
+          "warranty": 0
+        }
+      ],
+      "buyer": "0x6fdA8D063111bC3aB3f2Df3c8f6e66d6ea8fAc4a",
+      "closed": true,
+      "closed_at": 1791051611,
+      "currency": "USD",
+      "daily_penalty": 1000,
+      "deadline": 1791051242,
+      "formula": "quantity*unit_price+delivery+warranty+tax+daily_penalty*delivery_days",
+      "id": 0,
+      "outcome": "ranked",
+      "quantity": 10,
+      "ranking": [
+        0
+      ],
+      "ranking_hash": "6f0e90a6e3318ae0d15cd6e84c5fabba2da7412cf1f5e61ca6330253b91c7269",
+      "requirements": [
+        "10 new laptops, each with at least 16 GB RAM and 512 GB SSD",
+        "Delivery to the buyer office within 7 days",
+        "24-month parts and labour warranty"
+      ],
+      "review_deadline": 1791137642,
+      "terms_hash": "3e866343aa35ca8b00f533ff45a5e0dde9fd1a29c80f9b8162ff56fe4bf7e2f4",
+      "tie_break": "score,landed_cost,delivery_days,bid_id",
+      "title": "Live test · 10 business laptops"
+    }
+  ]
+}

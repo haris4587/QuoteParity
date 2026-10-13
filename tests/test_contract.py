@@ -195,4 +195,12 @@ class ContractTests(unittest.TestCase):
         gl.message.sender_address = OTHER; self.bid('Legitimate'); self.c.evaluate_quote(0,1)
         self.time(87501); self.assertEqual(json.loads(self.c.finalize_request(0))['ranking'],[1])
 
+    def test_delivery_duration_tie_break_with_zero_daily_cost(self):
+        gl.message.sender_address = BUYER
+        self.c = module.QuoteParity()
+        self.c.create_request('Delivery tie','["Delivery","Warranty"]',10,'USD',1100,0,json.dumps([SUPPLIER,OTHER]))
+        gl.message.sender_address=SUPPLIER; self.bid('Slower',10000,8); self.c.evaluate_quote(0,0)
+        gl.message.sender_address=OTHER; self.bid('Faster',10000,3); self.c.evaluate_quote(0,1)
+        self.time(1100); self.assertEqual(json.loads(self.c.finalize_request(0))['ranking'],[1,0])
+
 if __name__=='__main__':unittest.main()

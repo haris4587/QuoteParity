@@ -1,0 +1,66 @@
+{
+  "hash": "0x2a1e18eb12e2faa6b0837bceea0bd641d3d03bee15dacb6655b947efa08970d2",
+  "from": "0x64F7F82113cA72582aE1B35DE4daA6545BCDF4B2",
+  "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      9
+    ],
+    "readable": "1"
+  },
+  "method": "{\"args\":[\"Steward verification · changed evidence cannot block ranking\",\"[\\\"10 new laptops, each with at least 16 GB RAM and 512 GB SSD\\\",\\\"Delivery to the buyer office within 10 days included\\\",\\\"24-month parts and labour warranty included\\\"]\",10,\"USD\",1791902220,1000,\"[\\\"0xb73A984cBb9f49E390372953139fdf08e9fe122A\\\",\\\"0x566434F7D0ae1dd6A1565D833463be1c3ed65241\\\"]\",]\"method\":\"create_request\"}",
+  "leader_only": false,
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AAk=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            9
+          ],
+          "readable": "1"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AAk=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            9
+          ],
+          "readable": "1"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    }
+  ],
+  "votes": {
+    "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+    "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+    "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+    "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "idle",
+    "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+  }
+}

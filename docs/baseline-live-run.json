@@ -1,0 +1,285 @@
+{
+  "verifiedAt": "2026-10-03T18:23:03.427186+00:00",
+  "network": "studionet",
+  "chainId": 61999,
+  "contract": "0x52Bf9E533159ed35Bc473180b1C86908fFD67883",
+  "studioWallet": "0x6fdA8D063111bC3aB3f2Df3c8f6e66d6ea8fAc4a",
+  "walletMode": "Studio built-in account; no external wallet connection",
+  "fullConsensus": true,
+  "contractSourceSha256": "f50452df185bfa8d74ea8d6899662fb13e855731643ffa686369d20d2acba570",
+  "deployedSourceMatchesRepository": true,
+  "requestId": 0,
+  "outcome": "ranked",
+  "ranking": [
+    0
+  ],
+  "rankingHash": "6f0e90a6e3318ae0d15cd6e84c5fabba2da7412cf1f5e61ca6330253b91c7269",
+  "termsHash": "3e866343aa35ca8b00f533ff45a5e0dde9fd1a29c80f9b8162ff56fe4bf7e2f4",
+  "bids": [
+    {
+      "supplier": "Atlas Supply (test fixture)",
+      "status": "qualified",
+      "landedCost": 900000,
+      "score": 907000,
+      "scope": [
+        "covered",
+        "covered",
+        "covered"
+      ],
+      "decisionHash": "d420ad96c6c13191ffbc9e74856245e8abfa32f1aa7ece4d5dce7debbd0224b9",
+      "documentHash": "6447b220ca6d48ceb7d1334588e4982477bcd3eb8677a3f75e0ffb0cd6fd4eef",
+      "url": "https://raw.githubusercontent.com/haris4587/QuoteParity/17e07f30f0a89a5bad90ba40bf9e80613f33b271/public/quotes/atlas.txt"
+    },
+    {
+      "supplier": "Budget Devices (test fixture)",
+      "status": "rejected",
+      "landedCost": 800000,
+      "score": 803000,
+      "scope": [
+        "covered",
+        "excluded",
+        "excluded"
+      ],
+      "decisionHash": "ab40b88661de72783f6cb5ae247254a399434635cf198d8b6c37e8175d12b4a2",
+      "documentHash": "f7f2fc0674197d52e55a716045ccde97e04b874c84aa1ff0c389f4ed1d5dba34",
+      "url": "https://raw.githubusercontent.com/haris4587/QuoteParity/17e07f30f0a89a5bad90ba40bf9e80613f33b271/public/quotes/budget.txt"
+    }
+  ],
+  "transactions": [
+    {
+      "hash": "0x01b62cd94e52506650928cc53a8c64ed66f6a5f064460d070ed4fd70aec332df",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          0
+        ],
+        "readable": "null"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x01b62cd94e52506650928cc53a8c64ed66f6a5f064460d070ed4fd70aec332df"
+    },
+    {
+      "hash": "0x0e3441e1ce31ce9ed11690cbf05a1354ce671f45cdd5793eb5b4f3ac531a9ab0",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          68,
+          114,
+          101,
+          106,
+          101,
+          99,
+          116,
+          101,
+          100
+        ],
+        "readable": "\"rejected\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x0e3441e1ce31ce9ed11690cbf05a1354ce671f45cdd5793eb5b4f3ac531a9ab0"
+    },
+    {
+      "hash": "0x3bface4d5a2e6f8e16087ad448749fa0a303fafd4205ec6014f206496fb4c242",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          164,
+          7,
+          123,
+          34,
+          111,
+          117,
+          116,
+          99,
+          111,
+          109,
+          101,
+          34,
+          58,
+          34,
+          114,
+          97,
+          110,
+          107,
+          101,
+          100,
+          34,
+          44,
+          34,
+          114,
+          97,
+          110,
+          107,
+          105,
+          110,
+          103,
+          34,
+          58,
+          91,
+          48,
+          93,
+          44,
+          34,
+          114,
+          97,
+          110,
+          107,
+          105,
+          110,
+          103,
+          95,
+          104,
+          97,
+          115,
+          104,
+          34,
+          58,
+          34,
+          54,
+          102,
+          48,
+          101,
+          57,
+          48,
+          97,
+          54,
+          101,
+          51,
+          51,
+          49,
+          56,
+          97,
+          101,
+          48,
+          100,
+          49,
+          53,
+          99,
+          100,
+          54,
+          101,
+          56,
+          52,
+          99,
+          53,
+          102,
+          97,
+          98,
+          98,
+          97,
+          50,
+          100,
+          97,
+          55,
+          52,
+          49,
+          50,
+          99,
+          102,
+          49,
+          102,
+          53,
+          101,
+          54,
+          49,
+          99,
+          97,
+          54,
+          51,
+          51,
+          48,
+          50,
+          53,
+          51,
+          98,
+          57,
+          49,
+          99,
+          55,
+          50,
+          54,
+          57,
+          34,
+          125
+        ],
+        "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[0],\\\"ranking_hash\\\":\\\"6f0e90a6e3318ae0d15cd6e84c5fabba2da7412cf1f5e61ca6330253b91c7269\\\"}\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x3bface4d5a2e6f8e16087ad448749fa0a303fafd4205ec6014f206496fb4c242"
+    },
+    {
+      "hash": "0x78278a4ef170e02407921f62f70ed1352226ad46ce3868c621e3c244b79c30e5",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          9
+        ],
+        "readable": "1"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x78278a4ef170e02407921f62f70ed1352226ad46ce3868c621e3c244b79c30e5"
+    },
+    {
+      "hash": "0x7b811ab6fcc72f3c66bbe050dca6a840e05fad11f238ea0384ed967cc500ef91",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x7b811ab6fcc72f3c66bbe050dca6a840e05fad11f238ea0384ed967cc500ef91"
+    },
+    {
+      "hash": "0xb6ae34408aebecaa8397fec304b75a73dcc780c6e507cf3926041eb59a767dc4",
+      "status": "FINALIZED",
+      "successful": false,
+      "execution": "bidding closed",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xb6ae34408aebecaa8397fec304b75a73dcc780c6e507cf3926041eb59a767dc4"
+    },
+    {
+      "hash": "0xca741886a1673e08d5fd4464cb285c2163c50ac729b958455791362d5926f79f",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          1
+        ],
+        "readable": "0"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xca741886a1673e08d5fd4464cb285c2163c50ac729b958455791362d5926f79f"
+    },
+    {
+      "hash": "0xe124407bddd935701ef16fc6731f5046ac34bfaac16f9f78ea49bc4b79b94416",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          1
+        ],
+        "readable": "0"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xe124407bddd935701ef16fc6731f5046ac34bfaac16f9f78ea49bc4b79b94416"
+    }
+  ],
+  "testResults": {
+    "pythonContractTests": 15,
+    "nodeFrontendTests": 6,
+    "totalPassing": 21,
+    "productionBuild": "passed",
+    "browserVisualQA": "unavailable",
+    "sessionAccountFundingLiveTest": "blocked by automatic approval review; Studio built-in wallet used for authorized live run"
+  },
+  "lateBid": "Meridian transaction finalized with rollback: bidding closed. Not added to the request.",
+  "fixtureDisclosure": "Public quote documents are synthetic fictional supplier offers. Chain transactions and finalized contract state are real."
+}

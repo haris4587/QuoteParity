@@ -1,0 +1,66 @@
+{
+  "hash": "0xfd57b095db158a4c55ad28bcc9bbe3a202245104c64e3800e7940f8910c6c2aa",
+  "from": "0xefE1C22C78Ec9B436D35eb65655c06f9A718039B",
+  "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      0
+    ],
+    "readable": "null"
+  },
+  "method": "{}",
+  "leader_only": false,
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AAA=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            0
+          ],
+          "readable": "null"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AAA=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            0
+          ],
+          "readable": "null"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    }
+  ],
+  "votes": {
+    "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+    "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+    "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+    "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+    "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+  }
+}

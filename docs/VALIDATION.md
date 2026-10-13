@@ -1,14 +1,13 @@
-# Validation
+# Validation — revision 2
 
-- `npm test`: **21 passing tests** (15 Python contract tests, 6 Node/JSDOM application and receipt tests).
-- `npm run build`: successful Vite production build.
-- Stable GenLayer SDK schema check: passed in real GenVM.
-- Deployed source downloaded through `getContractCode` and compared byte-for-byte with `contracts/quote_parity.py`: exact match.
-- RPC CORS preflight from the deployed app origin: HTTP 200, explicitly allows the app origin and JSON POST requests.
-- Live deployment and purchasing workflow: real full-consensus transactions from Studio's built-in account. Individual receipts and finalized-state snapshot are checked in.
-- Initial timestamp accessor error was found in the first live attempt, corrected to `gl.message_raw['datetime']`, and deployed as a fresh instance. Original failed creation/submission receipts are retained. They are not counted as successful live transactions.
-- Budget quote's excluded delivery/warranty was rejected by independent validator AI review. Atlas's complete quote qualified. Meridian's submission after the committed deadline was rejected before evidence processing.
-- Browser screenshot evidence concerns the real Studio workflow. App visual browser QA was unavailable because the managed preview browser skill was not exposed. JSDOM checks cover rendered content and actions, not responsive pixel layout.
-- Frontend session-account funding was not executed as a live agent test: automatic approval review rejected funding a newly generated account because the user required Studio's built-in wallet. The authorized live run uses the funded Studio built-in address. Frontend session-wallet calls are tested with a stubbed client; cross-origin RPC access is independently verified read-only.
+- `npm test`: 42 passing tests (31 Python contract tests and 11 Node/JSDOM tests). Covers malformed JSON and schemas, unavailable and changed evidence, 20-wallet capacity with 60 bounded historical bids, uninvited Sybils, per-wallet reservations, failed admissions, replacements, retry exhaustion, the 24-hour unresolved-review timeout, integer arithmetic and all tie-break levels.
+- Production build: Vite; final packaging runs the same build against the pushed source.
+- GenVM AST lint and SDK semantic validation passed for the exact deployed contract; retained output: [revision2-genvm-check.json](revision2-genvm-check.json). No contract edits occurred after deployment.
+- Full Consensus deployment and independent supplier assessments: finalized GenVM results and votes in [revision2-receipts](revision2-receipts). A quorum-cancelled validator may be marked idle/error; it is not an application failure when the leader returned successfully and agreement quorum finalized.
+- Read-only verifier checks exact byte equality of `getContractCode`, `contracts/quote_parity.py` and the public source download, chain 61999 and protocolVersion 2. State reads use LATEST_FINAL; records: [revision2-state.json](revision2-state.json), [revision2-verification.json](revision2-verification.json), [revision2-schema.json](revision2-schema.json).
+- Public app's transaction interface was used for purchase-request creation, supplier submission, validator evaluation and ranking. Buyer and supplier addresses are distinct. Test signers use session-only keys and the development faucet; no external wallet extension was connected and no keys are published.
+- Source-change behavior is verified in deterministic tests. Live mutable-source experiments returned unchanged content after the GitHub source changed; those offers qualified. These experiments are preserved as limitations, not relabeled as inconclusive evidence. A separate version-pinned incomplete-warranty fixture tests the live inconclusive path.
+- Malformed model output is injected in deterministic tests; live providers were not forced to emit invalid JSON. The timeout is simulated in tests rather than waiting 24 hours live.
+- Historical October 3 evidence is retained as baseline, including failed calls. It does not prove revision 2.
 
-This is development-network evidence, not an audit, production readiness certification, legal procurement award, or proof of supplier authenticity. Quote fixtures are fictional and explicitly labelled.
+Fixtures are fictional. These checks do not establish company authenticity, legal procurement authority, production readiness or an audit.

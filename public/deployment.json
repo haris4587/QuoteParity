@@ -1,15 +1,20 @@
 {
   "network": "studionet",
   "chainId": 61999,
-  "address": "0x52Bf9E533159ed35Bc473180b1C86908fFD67883",
+  "address": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
   "liveRun": "/live-run.json",
-  "deploymentTx": "0x01b62cd94e52506650928cc53a8c64ed66f6a5f064460d070ed4fd70aec332df",
+  "deploymentTx": "0xfd57b095db158a4c55ad28bcc9bbe3a202245104c64e3800e7940f8910c6c2aa",
   "studio": "https://studio.genlayer.com",
-  "deployedAt": "2026-10-03",
+  "deployedAt": "2026-10-13",
   "supersededDeployment": {
     "address": "0xEE11429C43dA330BEdb61b8dABABE4C3BAF542F7",
     "deploymentTx": "0x36b560d48ada59ec61ac1064bf9726953a0ed5269275458225f939a361ec1e15",
     "reason": "timestamp accessor corrected before a successful workflow"
   },
-  "website": "https://quoteparity.itzanza2.chatgpt.site"
+  "website": "https://quoteparity.itzanza2.chatgpt.site",
+  "previousDeployment": {
+    "address": "0x52Bf9E533159ed35Bc473180b1C86908fFD67883",
+    "deploymentTx": "0x01b62cd94e52506650928cc53a8c64ed66f6a5f064460d070ed4fd70aec332df"
+  },
+  "protocolVersion": 2
 }

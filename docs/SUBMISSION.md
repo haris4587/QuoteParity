@@ -1,33 +1,31 @@
-# QuoteParity — Project Explorer copy
+# QuoteParity revision 2 resubmission
 
-## Name
-QuoteParity
+Replace the original contract link with:
+https://explorer-studio.genlayer.com/address/0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7
 
-## One-liner
-GenLayer checks supplier quote scope and exclusions before a committed cost formula ranks comparable bids.
+Website remains https://quoteparity.itzanza2.chatgpt.site and is public.
 
-## Overview
-QuoteParity helps buyers compare supplier offers on equal terms. A buyer commits purchasing requirements, quantity, currency, deadline and cost formula. Suppliers commit structured prices and public quote document hashes. The Intelligent Contract independently fetches each source and uses validator AI consensus to determine whether it covers the required scope, hides exclusions or disagrees with the submitted prices. Deterministic rules rank only qualifying offers by landed cost plus published delivery-time cost, with fixed tie-breakers.
+## What did you change? (under 1,000 characters)
 
-The laptop test demonstrates why headline price is insufficient: a $9,000 offer including delivery and a 24-month warranty qualified; a cheaper $8,000 offer excluding both was rejected. A late submission rolled back under the bid deadline. The comparison finalized to bid 0 without making a purchase or transferring supplier funds.
+Deployed revision 2 and matched the public app to its exact source, ABI and chain 61999. Supplier names are explicitly unverified claims. Immutable buyer-invited wallet rosters reserve one slot per supplier; Sybil wallets cannot consume slots, failed admission uses no attempt, replacements preserve history, and bounded retries/timeouts prevent permanent blocking. Malformed JSON returns structured INCONCLUSIVE. Live app transactions used separate buyer/supplier wallets: four bids qualified with different prices/durations; ranking [2,3,1,0] proves cost and bid-ID ties. Another request finalized [2,1], proving the delivery tie after three INCONCLUSIVE warranty reviews; unresolved and superseded bids were excluded. Wrong-hash and uninvited calls were rejected. 42 tests pass; GenVM lint/SDK validation pass. Finalized GenVM results, validator votes, authoritative state and source/config equality are archived. The unchanged website is public. No escrow is needed.
 
-## GenLayer's role
-GenLayer is central to eligibility: validators independently fetch hash-pinned quote documents, interpret requirement coverage and price consistency, and agree on normalized conclusions. Permissions, capacity, timestamps, evidence commitments, arithmetic, retry limits and final ranking remain deterministic. Missing or changed evidence cannot automatically qualify.
+## Read-only review path
 
-## Evidence links
-- Source: https://github.com/haris4587/QuoteParity
-- Intelligent Contract: https://github.com/haris4587/QuoteParity/blob/main/contracts/quote_parity.py
-- Deployment: https://explorer-studio.genlayer.com/tx/0x01b62cd94e52506650928cc53a8c64ed66f6a5f064460d070ed4fd70aec332df
-- Contract: https://explorer-studio.genlayer.com/address/0x52Bf9E533159ed35Bc473180b1C86908fFD67883
-- Scope qualification: https://explorer-studio.genlayer.com/tx/0x7b811ab6fcc72f3c66bbe050dca6a840e05fad11f238ea0384ed967cc500ef91
-- Exclusion rejection: https://explorer-studio.genlayer.com/tx/0x0e3441e1ce31ce9ed11690cbf05a1354ce671f45cdd5793eb5b4f3ac531a9ab0
-- Final ranking: https://explorer-studio.genlayer.com/tx/0x3bface4d5a2e6f8e16087ad448749fa0a303fafd4205ec6014f206496fb4c242
-- Live report: https://github.com/haris4587/QuoteParity/blob/main/docs/live-run.json
-- Finalized state: https://github.com/haris4587/QuoteParity/blob/main/docs/finalized-state.json
-- Tests and limits: https://github.com/haris4587/QuoteParity/blob/main/docs/VALIDATION.md
-- Workflow screenshot: https://github.com/haris4587/QuoteParity/blob/main/docs/studio-proof.jpg
-- 512 px PNG logo: https://github.com/haris4587/QuoteParity/blob/main/public/quoteparity-logo.png
-- Website: https://quoteparity.itzanza2.chatgpt.site — owner-private until public sharing is explicitly enabled. Do not describe it as publicly reviewable yet.
+1. Open the public app and click Refresh finalized state. No account is required to inspect finalized results.
+2. Select request #0, Steward verification · independent supplier bids. Four qualifying wallets rank Zephyr, Twin, Meridian, Atlas; Budget and the initial ambiguous fixture are rejected.
+3. Select request #2, Steward verification · inconclusive recovery and delivery tie. Fast (5 days) ranks above Atlas (7 days) at equal $9,000 cost and score. Inspect Undetermined warranty: warranty is unclear, all three reviews are preserved, status remains inconclusive and it is excluded. The prior quote from that wallet is superseded and excluded.
+4. Expand Contract and transaction evidence. The current address and downloaded source match revision 2; Live test record links all 36 finalized transactions.
 
-## Limits to disclose
-Studionet development app; synthetic quote fixtures; no escrow or legal purchase award. Supports public UTF-8 text/JSON/static HTML documents up to 32 KB, not PDF uploads or authenticated supplier portals. AI consensus does not establish supplier identity or performance. Repository checks pass; frontend browser visual QA and live funding of a new frontend session account were not completed. The real workflow used the requested Studio built-in wallet.
+## Evidence
+
+- [Steward requirement report](STEWARD-REVISION.md)
+- [Live transaction manifest](live-run.json)
+- [Authoritative latest-final state](revision2-state.json)
+- [Source/config/readback verification and GenVM results](revision2-verification.json)
+- [Individual finalized receipts and votes](revision2-receipts)
+- [Contract ABI](revision2-schema.json)
+- [Validation and limits](VALIDATION.md)
+- [Live inconclusive screenshot](revision2-inconclusive-proof.jpg)
+- [Final ranking screenshot](revision2-final-ranking-proof.jpg)
+
+Historical October 3 evidence is preserved in baseline files. Mutable-source experiments returned unchanged content and qualified, so they are not described as live source-change detection. Malformed model output and the 24-hour timeout are adversarial unit tests. No demo video has been published.

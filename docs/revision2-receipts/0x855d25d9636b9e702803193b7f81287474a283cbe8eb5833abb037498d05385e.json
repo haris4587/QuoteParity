@@ -1,0 +1,65 @@
+{
+  "hash": "0x855d25d9636b9e702803193b7f81287474a283cbe8eb5833abb037498d05385e",
+  "from": "0xb4a9D3Bf053Bed98d2Fe73b03AAad1B49C30D2De",
+  "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      41
+    ],
+    "readable": "5"
+  },
+  "method": "{\"args\":[0,\"Budget (unverified test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/0db073cd547278e15f48a8702610687c659ccb27/public/quotes/revision2/budget.txt\",\"c06e66fb5273a969e78f841e2a68110870cd0b876f5a2215ab2390f21d9c770c\",80000,0,0,0,3,]\"method\":\"submit_quote\"}",
+  "leader_only": false,
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "ACk=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            41
+          ],
+          "readable": "5"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "ERROR",
+      "result": {
+        "raw": "AmlkbGU=",
+        "status": "contract_error",
+        "payload": "idle"
+      },
+      "genvm_result": {
+        "stderr": "Validator execution cancelled after quorum",
+        "stdout": "",
+        "raw_error": {
+          "fatal": false,
+          "causes": [
+            "VALIDATOR_QUORUM_REACHED"
+          ]
+        },
+        "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+      }
+    }
+  ],
+  "votes": {
+    "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+    "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+    "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "idle",
+    "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+    "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree"
+  }
+}

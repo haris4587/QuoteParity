@@ -1,0 +1,66 @@
+{
+  "hash": "0x5616cd60eecbbe812bf26cac8feb4cfcea7537b8eb811f498ac4d0af95f33a34",
+  "from": "0xb73A984cBb9f49E390372953139fdf08e9fe122A",
+  "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      1
+    ],
+    "readable": "0"
+  },
+  "method": "{\"args\":[1,\"Atlas (unverified test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/0db073cd547278e15f48a8702610687c659ccb27/public/quotes/revision2/atlas.txt\",\"52e7beb5cdf9ddc71bc1cb78303dd2909f82821df71e851c46c14ba6e987af3c\",90000,0,0,0,7,]\"method\":\"submit_quote\"}",
+  "leader_only": false,
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AAE=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            1
+          ],
+          "readable": "0"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AAE=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            1
+          ],
+          "readable": "0"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    }
+  ],
+  "votes": {
+    "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+    "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+    "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+    "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+    "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "hash": "0x1e1f7c6e06fe5ec98099df04ff86341c106ccb3f842222efcf9275913ef51d5a",
+  "from": "0x6a3d8991cB264DEF72616d631b6b30713fCea555",
+  "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      76,
+      113,
+      117,
+      97,
+      108,
+      105,
+      102,
+      105,
+      101,
+      100
+    ],
+    "readable": "\"qualified\""
+  },
+  "method": "{\"args\":[0,1,]\"method\":\"evaluate_quote\"}",
+  "leader_only": false,
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AExxdWFsaWZpZWQ=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            76,
+            113,
+            117,
+            97,
+            108,
+            105,
+            102,
+            105,
+            101,
+            100
+          ],
+          "readable": "\"qualified\""
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "AExxdWFsaWZpZWQ=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            76,
+            113,
+            117,
+            97,
+            108,
+            105,
+            102,
+            105,
+            101,
+            100
+          ],
+          "readable": "\"qualified\""
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    }
+  ],
+  "votes": {
+    "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+    "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+    "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "idle",
+    "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree",
+    "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+  }
+}

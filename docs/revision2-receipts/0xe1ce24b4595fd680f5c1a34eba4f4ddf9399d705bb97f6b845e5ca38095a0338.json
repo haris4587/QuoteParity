@@ -1,0 +1,66 @@
+{
+  "hash": "0xe1ce24b4595fd680f5c1a34eba4f4ddf9399d705bb97f6b845e5ca38095a0338",
+  "from": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+  "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      25
+    ],
+    "readable": "3"
+  },
+  "method": "{\"args\":[2,\"Undetermined warranty (unverified fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/e7b6eee64b84426737261494e1499b630704cb2d/public/quotes/revision2/undetermined-warranty.txt\",\"3be4d7e46f62bf28f67985d7e3f78f3a67ee645ed7e121ccdb73dfe6b5ee6498\",90000,0,0,0,7,]\"method\":\"submit_quote\"}",
+  "leader_only": false,
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "ABk=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            25
+          ],
+          "readable": "3"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "ABk=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            25
+          ],
+          "readable": "3"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    }
+  ],
+  "votes": {
+    "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "idle",
+    "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "idle",
+    "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+    "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+    "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "agree"
+  }
+}

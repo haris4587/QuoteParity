@@ -1,0 +1,3744 @@
+{
+  "checkedAt": "2026-10-13T15:02:40.235Z",
+  "chainId": 61999,
+  "address": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+  "protocolVersion": 2,
+  "sourceMatches": true,
+  "publicSourceMatches": true,
+  "sourceSha256": "85fa245c7ef989b0a767ebdaad1f14e737041fa9a811f3b6f2fc57ab7af4bdc6",
+  "readVariant": "LATEST_FINAL",
+  "receipts": [
+    {
+      "hash": "0xfd57b095db158a4c55ad28bcc9bbe3a202245104c64e3800e7940f8910c6c2aa",
+      "from": "0xefE1C22C78Ec9B436D35eb65655c06f9A718039B",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          0
+        ],
+        "readable": "null"
+      },
+      "method": "{}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAA=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                0
+              ],
+              "readable": "null"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAA=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                0
+              ],
+              "readable": "null"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+      }
+    },
+    {
+      "hash": "0x483fec4ae98ef07c306d386cb1690e33b0db724e5078fb58c066e15c4e7e02e0",
+      "from": "0x64F7F82113cA72582aE1B35DE4daA6545BCDF4B2",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          1
+        ],
+        "readable": "0"
+      },
+      "method": "{\"args\":[\"Steward verification · independent supplier bids\",\"[\\\"10 new laptops, each with at least 16 GB RAM and 512 GB SSD\\\",\\\"Delivery to the buyer office within 10 days included\\\",\\\"24-month parts and labour warranty included\\\"]\",10,\"USD\",1791901500,1000,\"[\\\"0xb73A984cBb9f49E390372953139fdf08e9fe122A\\\",\\\"0x6a3d8991cB264DEF72616d631b6b30713fCea555\\\",\\\"0x595169519f05799954e8F135f4A300BddFF8d2f7\\\",\\\"0xC88d7691FC65323BAfF8918C39fab4edc3641bB6\\\",\\\"0xb4a9D3Bf053Bed98d2Fe73b03AAad1B49C30D2De\\\",\\\"0x566434F7D0ae1dd6A1565D833463be1c3ed65241\\\"]\",]\"method\":\"create_request\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAE=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                1
+              ],
+              "readable": "0"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "idle",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "idle"
+      }
+    },
+    {
+      "hash": "0x622f14de1d404bd1bcf1c2dc04554cdaa5ed7a7bab0c493fa640dca74aff9f28",
+      "from": "0xb73A984cBb9f49E390372953139fdf08e9fe122A",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          1
+        ],
+        "readable": "0"
+      },
+      "method": "{\"args\":[0,\"Atlas (unverified test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/0db073cd547278e15f48a8702610687c659ccb27/public/quotes/revision2/atlas.txt\",\"52e7beb5cdf9ddc71bc1cb78303dd2909f82821df71e851c46c14ba6e987af3c\",90000,0,0,0,7,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAE=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                1
+              ],
+              "readable": "0"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "idle",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "idle",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree"
+      }
+    },
+    {
+      "hash": "0x3af078a5bfc5236401dd81b5f5a5990cb1aaa6cd56389e57140e396117a3e83e",
+      "from": "0x6a3d8991cB264DEF72616d631b6b30713fCea555",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          9
+        ],
+        "readable": "1"
+      },
+      "method": "{\"args\":[0,\"Meridian (unverified test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/0db073cd547278e15f48a8702610687c659ccb27/public/quotes/revision2/meridian.txt\",\"868c70128d027743f4f23d9681f76e4df11c5e37e2ba80c0914f48d1a8b1631c\",89900,0,0,0,8,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAk=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                9
+              ],
+              "readable": "1"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "idle",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "idle"
+      }
+    },
+    {
+      "hash": "0xd669e3c45ed8e4c21a51f1c4071a334c6567ba2feaa0c7692bba0081d35a071f",
+      "from": "0x595169519f05799954e8F135f4A300BddFF8d2f7",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          17
+        ],
+        "readable": "2"
+      },
+      "method": "{\"args\":[0,\"Zephyr (unverified test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/0db073cd547278e15f48a8702610687c659ccb27/public/quotes/revision2/zephyr.txt\",\"3fe5797473a5fa1d67cfefcc74a23b789b0c1c08f9c28643cc2f2c3f4e463ea1\",89000,0,0,0,5,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ABE=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                17
+              ],
+              "readable": "2"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "idle",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "idle"
+      }
+    },
+    {
+      "hash": "0x13b7924cad1d1357ae5f259f3ed850cf8b398490a4bf8be2c0b93c27a9370415",
+      "from": "0xC88d7691FC65323BAfF8918C39fab4edc3641bB6",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          25
+        ],
+        "readable": "3"
+      },
+      "method": "{\"args\":[0,\"Twin (unverified test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/0db073cd547278e15f48a8702610687c659ccb27/public/quotes/revision2/twin.txt\",\"3c573069f94a951358ca8442c7715878507c61cf734c20eafd0876b522365d73\",89000,0,0,0,5,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ABk=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                25
+              ],
+              "readable": "3"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "idle",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "idle",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+      }
+    },
+    {
+      "hash": "0xce7b6fed1238fa82922cde5a699aa9698a8eb507d9978ec45b2611cadee04d6c",
+      "from": "0xb4a9D3Bf053Bed98d2Fe73b03AAad1B49C30D2De",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": false,
+      "execution": "document changed or incorrect hash",
+      "method": "{\"args\":[0,\"Budget (unverified test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/0db073cd547278e15f48a8702610687c659ccb27/public/quotes/revision2/budget.txt\",\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",80000,0,0,0,3,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AWRvY3VtZW50IGNoYW5nZWQgb3IgaW5jb3JyZWN0IGhhc2g=",
+            "status": "rollback",
+            "payload": "document changed or incorrect hash"
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AWRvY3VtZW50IGNoYW5nZWQgb3IgaW5jb3JyZWN0IGhhc2g=",
+            "status": "rollback",
+            "payload": "document changed or incorrect hash"
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "idle",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree",
+        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "idle"
+      }
+    },
+    {
+      "hash": "0x4621a4b9ffc46c3a3e8a4a1c97f7a77bec994603041bc7abc795be7c60fe7b72",
+      "from": "0x566434F7D0ae1dd6A1565D833463be1c3ed65241",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          33
+        ],
+        "readable": "4"
+      },
+      "method": "{\"args\":[0,\"Unclear (unverified test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/0db073cd547278e15f48a8702610687c659ccb27/public/quotes/revision2/unclear.txt\",\"e2133290547319c8373243ac139be3098b31e66538f755982afed0084a4d01b8\",86000,0,0,0,4,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ACE=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                33
+              ],
+              "readable": "4"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "idle",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "idle",
+        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+      }
+    },
+    {
+      "hash": "0x22b24b8209f31b427d5b2fd06bfda14521196dd8910689288a1476ae0010c825",
+      "from": "0xefE1C22C78Ec9B436D35eb65655c06f9A718039B",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": false,
+      "execution": "supplier wallet not invited",
+      "method": "{\"args\":[0,\"Copied Atlas name (uninvited test)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/0db073cd547278e15f48a8702610687c659ccb27/public/quotes/revision2/atlas.txt\",\"52e7beb5cdf9ddc71bc1cb78303dd2909f82821df71e851c46c14ba6e987af3c\",90000,0,0,0,7,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AXN1cHBsaWVyIHdhbGxldCBub3QgaW52aXRlZA==",
+            "status": "rollback",
+            "payload": "supplier wallet not invited"
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AXN1cHBsaWVyIHdhbGxldCBub3QgaW52aXRlZA==",
+            "status": "rollback",
+            "payload": "supplier wallet not invited"
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree",
+        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+      }
+    },
+    {
+      "hash": "0x855d25d9636b9e702803193b7f81287474a283cbe8eb5833abb037498d05385e",
+      "from": "0xb4a9D3Bf053Bed98d2Fe73b03AAad1B49C30D2De",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          41
+        ],
+        "readable": "5"
+      },
+      "method": "{\"args\":[0,\"Budget (unverified test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/0db073cd547278e15f48a8702610687c659ccb27/public/quotes/revision2/budget.txt\",\"c06e66fb5273a969e78f841e2a68110870cd0b876f5a2215ab2390f21d9c770c\",80000,0,0,0,3,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ACk=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                41
+              ],
+              "readable": "5"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "idle",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree"
+      }
+    },
+    {
+      "hash": "0x9a326eb4ef96f433edf8105dcc74ecc8aa976f1f064d354c285de6edd88424de",
+      "from": "0xb73A984cBb9f49E390372953139fdf08e9fe122A",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "method": "{\"args\":[0,0,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "idle"
+      }
+    },
+    {
+      "hash": "0x1e1f7c6e06fe5ec98099df04ff86341c106ccb3f842222efcf9275913ef51d5a",
+      "from": "0x6a3d8991cB264DEF72616d631b6b30713fCea555",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "method": "{\"args\":[0,1,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "idle",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree",
+        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+      }
+    },
+    {
+      "hash": "0xdebdd97f8abe8479082249eeb48289af04dc85dd354732fd593ff22d05fe9d87",
+      "from": "0x595169519f05799954e8F135f4A300BddFF8d2f7",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "method": "{\"args\":[0,2,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "idle"
+      }
+    },
+    {
+      "hash": "0x0265da3dc8d2311934c67a181dc3d797e90b2fed77ff9365ac57755db85938ed",
+      "from": "0xC88d7691FC65323BAfF8918C39fab4edc3641bB6",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "method": "{\"args\":[0,3,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "idle",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "idle"
+      }
+    },
+    {
+      "hash": "0x74410ed263a5ae896a6a37575c6add58295199402b634e974dd678cbdc7b8dee",
+      "from": "0xb4a9D3Bf053Bed98d2Fe73b03AAad1B49C30D2De",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          68,
+          114,
+          101,
+          106,
+          101,
+          99,
+          116,
+          101,
+          100
+        ],
+        "readable": "\"rejected\""
+      },
+      "method": "{\"args\":[0,5,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AERyZWplY3RlZA==",
+            "status": "return",
+            "payload": {
+              "raw": [
+                68,
+                114,
+                101,
+                106,
+                101,
+                99,
+                116,
+                101,
+                100
+              ],
+              "readable": "\"rejected\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "idle",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "idle",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+      }
+    },
+    {
+      "hash": "0xd8c1c5a67f1d89262e291f661c49c728cd3abc2239745e99557c1f8fe5cc82db",
+      "from": "0x566434F7D0ae1dd6A1565D833463be1c3ed65241",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          68,
+          114,
+          101,
+          106,
+          101,
+          99,
+          116,
+          101,
+          100
+        ],
+        "readable": "\"rejected\""
+      },
+      "method": "{\"args\":[0,4,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AERyZWplY3RlZA==",
+            "status": "return",
+            "payload": {
+              "raw": [
+                68,
+                114,
+                101,
+                106,
+                101,
+                99,
+                116,
+                101,
+                100
+              ],
+              "readable": "\"rejected\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AERyZWplY3RlZA==",
+            "status": "return",
+            "payload": {
+              "raw": [
+                68,
+                114,
+                101,
+                106,
+                101,
+                99,
+                116,
+                101,
+                100
+              ],
+              "readable": "\"rejected\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "disagree",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree"
+      }
+    },
+    {
+      "hash": "0x70335913fec8445d800a0b68bbf15f1e764204c6b2bd9fa24aace419bb7cb1ed",
+      "from": "0x64F7F82113cA72582aE1B35DE4daA6545BCDF4B2",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          212,
+          7,
+          123,
+          34,
+          111,
+          117,
+          116,
+          99,
+          111,
+          109,
+          101,
+          34,
+          58,
+          34,
+          114,
+          97,
+          110,
+          107,
+          101,
+          100,
+          34,
+          44,
+          34,
+          114,
+          97,
+          110,
+          107,
+          105,
+          110,
+          103,
+          34,
+          58,
+          91,
+          50,
+          44,
+          51,
+          44,
+          49,
+          44,
+          48,
+          93,
+          44,
+          34,
+          114,
+          97,
+          110,
+          107,
+          105,
+          110,
+          103,
+          95,
+          104,
+          97,
+          115,
+          104,
+          34,
+          58,
+          34,
+          52,
+          49,
+          54,
+          102,
+          51,
+          99,
+          51,
+          97,
+          52,
+          50,
+          49,
+          57,
+          101,
+          49,
+          53,
+          101,
+          51,
+          100,
+          55,
+          48,
+          101,
+          57,
+          99,
+          52,
+          48,
+          56,
+          53,
+          102,
+          97,
+          54,
+          97,
+          99,
+          57,
+          57,
+          97,
+          53,
+          49,
+          100,
+          102,
+          97,
+          53,
+          56,
+          49,
+          53,
+          48,
+          48,
+          53,
+          52,
+          101,
+          50,
+          54,
+          50,
+          97,
+          57,
+          101,
+          56,
+          56,
+          98,
+          52,
+          100,
+          99,
+          54,
+          98,
+          101,
+          34,
+          125
+        ],
+        "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[2,3,1,0],\\\"ranking_hash\\\":\\\"416f3c3a4219e15e3d70e9c4085fa6ac99a51dfa58150054e262a9e88b4dc6be\\\"}\""
+      },
+      "method": "{\"args\":[0,]\"method\":\"finalize_request\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ANQHeyJvdXRjb21lIjoicmFua2VkIiwicmFua2luZyI6WzIsMywxLDBdLCJyYW5raW5nX2hhc2giOiI0MTZmM2MzYTQyMTllMTVlM2Q3MGU5YzQwODVmYTZhYzk5YTUxZGZhNTgxNTAwNTRlMjYyYTllODhiNGRjNmJlIn0=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                212,
+                7,
+                123,
+                34,
+                111,
+                117,
+                116,
+                99,
+                111,
+                109,
+                101,
+                34,
+                58,
+                34,
+                114,
+                97,
+                110,
+                107,
+                101,
+                100,
+                34,
+                44,
+                34,
+                114,
+                97,
+                110,
+                107,
+                105,
+                110,
+                103,
+                34,
+                58,
+                91,
+                50,
+                44,
+                51,
+                44,
+                49,
+                44,
+                48,
+                93,
+                44,
+                34,
+                114,
+                97,
+                110,
+                107,
+                105,
+                110,
+                103,
+                95,
+                104,
+                97,
+                115,
+                104,
+                34,
+                58,
+                34,
+                52,
+                49,
+                54,
+                102,
+                51,
+                99,
+                51,
+                97,
+                52,
+                50,
+                49,
+                57,
+                101,
+                49,
+                53,
+                101,
+                51,
+                100,
+                55,
+                48,
+                101,
+                57,
+                99,
+                52,
+                48,
+                56,
+                53,
+                102,
+                97,
+                54,
+                97,
+                99,
+                57,
+                57,
+                97,
+                53,
+                49,
+                100,
+                102,
+                97,
+                53,
+                56,
+                49,
+                53,
+                48,
+                48,
+                53,
+                52,
+                101,
+                50,
+                54,
+                50,
+                97,
+                57,
+                101,
+                56,
+                56,
+                98,
+                52,
+                100,
+                99,
+                54,
+                98,
+                101,
+                34,
+                125
+              ],
+              "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[2,3,1,0],\\\"ranking_hash\\\":\\\"416f3c3a4219e15e3d70e9c4085fa6ac99a51dfa58150054e262a9e88b4dc6be\\\"}\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ANQHeyJvdXRjb21lIjoicmFua2VkIiwicmFua2luZyI6WzIsMywxLDBdLCJyYW5raW5nX2hhc2giOiI0MTZmM2MzYTQyMTllMTVlM2Q3MGU5YzQwODVmYTZhYzk5YTUxZGZhNTgxNTAwNTRlMjYyYTllODhiNGRjNmJlIn0=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                212,
+                7,
+                123,
+                34,
+                111,
+                117,
+                116,
+                99,
+                111,
+                109,
+                101,
+                34,
+                58,
+                34,
+                114,
+                97,
+                110,
+                107,
+                101,
+                100,
+                34,
+                44,
+                34,
+                114,
+                97,
+                110,
+                107,
+                105,
+                110,
+                103,
+                34,
+                58,
+                91,
+                50,
+                44,
+                51,
+                44,
+                49,
+                44,
+                48,
+                93,
+                44,
+                34,
+                114,
+                97,
+                110,
+                107,
+                105,
+                110,
+                103,
+                95,
+                104,
+                97,
+                115,
+                104,
+                34,
+                58,
+                34,
+                52,
+                49,
+                54,
+                102,
+                51,
+                99,
+                51,
+                97,
+                52,
+                50,
+                49,
+                57,
+                101,
+                49,
+                53,
+                101,
+                51,
+                100,
+                55,
+                48,
+                101,
+                57,
+                99,
+                52,
+                48,
+                56,
+                53,
+                102,
+                97,
+                54,
+                97,
+                99,
+                57,
+                57,
+                97,
+                53,
+                49,
+                100,
+                102,
+                97,
+                53,
+                56,
+                49,
+                53,
+                48,
+                48,
+                53,
+                52,
+                101,
+                50,
+                54,
+                50,
+                97,
+                57,
+                101,
+                56,
+                56,
+                98,
+                52,
+                100,
+                99,
+                54,
+                98,
+                101,
+                34,
+                125
+              ],
+              "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[2,3,1,0],\\\"ranking_hash\\\":\\\"416f3c3a4219e15e3d70e9c4085fa6ac99a51dfa58150054e262a9e88b4dc6be\\\"}\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree"
+      }
+    },
+    {
+      "hash": "0x2a1e18eb12e2faa6b0837bceea0bd641d3d03bee15dacb6655b947efa08970d2",
+      "from": "0x64F7F82113cA72582aE1B35DE4daA6545BCDF4B2",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          9
+        ],
+        "readable": "1"
+      },
+      "method": "{\"args\":[\"Steward verification · changed evidence cannot block ranking\",\"[\\\"10 new laptops, each with at least 16 GB RAM and 512 GB SSD\\\",\\\"Delivery to the buyer office within 10 days included\\\",\\\"24-month parts and labour warranty included\\\"]\",10,\"USD\",1791902220,1000,\"[\\\"0xb73A984cBb9f49E390372953139fdf08e9fe122A\\\",\\\"0x566434F7D0ae1dd6A1565D833463be1c3ed65241\\\"]\",]\"method\":\"create_request\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAk=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                9
+              ],
+              "readable": "1"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAk=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                9
+              ],
+              "readable": "1"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "idle",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+      }
+    },
+    {
+      "hash": "0x5616cd60eecbbe812bf26cac8feb4cfcea7537b8eb811f498ac4d0af95f33a34",
+      "from": "0xb73A984cBb9f49E390372953139fdf08e9fe122A",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          1
+        ],
+        "readable": "0"
+      },
+      "method": "{\"args\":[1,\"Atlas (unverified test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/0db073cd547278e15f48a8702610687c659ccb27/public/quotes/revision2/atlas.txt\",\"52e7beb5cdf9ddc71bc1cb78303dd2909f82821df71e851c46c14ba6e987af3c\",90000,0,0,0,7,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAE=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                1
+              ],
+              "readable": "0"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAE=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                1
+              ],
+              "readable": "0"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree"
+      }
+    },
+    {
+      "hash": "0xa25069453da3ec87d55f6c33d58e983e12ae1aa021f768ccb7ad13f1c20ba634",
+      "from": "0x566434F7D0ae1dd6A1565D833463be1c3ed65241",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          9
+        ],
+        "readable": "1"
+      },
+      "method": "{\"args\":[1,\"Recovery (unverified mutable-source fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/main/public/quotes/revision2/mutable-recovery.txt\",\"cd333d2b274331f88cdf46291f632c9a79625be8ef416f8e40652a85a81b8e97\",90000,0,0,0,7,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAk=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                9
+              ],
+              "readable": "1"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAk=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                9
+              ],
+              "readable": "1"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "idle",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree",
+        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "idle"
+      }
+    },
+    {
+      "hash": "0xe50f810a2b414e1b7122da9ca0415cb1860f5de6d9b2b0504416bbb3e4b3d14b",
+      "from": "0xb73A984cBb9f49E390372953139fdf08e9fe122A",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "method": "{\"args\":[1,0,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "idle",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "idle",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree"
+      }
+    },
+    {
+      "hash": "0x784289eb3e9a1db5c48a75389d35f846dfc6860c69591d6fe896ba82e8030bf6",
+      "from": "0x566434F7D0ae1dd6A1565D833463be1c3ed65241",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "method": "{\"args\":[1,1,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "idle",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "agree",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree"
+      }
+    },
+    {
+      "hash": "0xea92101c7bd2ff6ba9d2bb5f74cec7116fa98bc55c2398a82e2fa82769b4bbe9",
+      "from": "0x2c21D725448c27217969C88CE4f43F22792DE267",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          17
+        ],
+        "readable": "2"
+      },
+      "method": "{\"args\":[\"Steward verification · inconclusive recovery and delivery tie\",\"[\\\"10 new laptops, each with at least 16 GB RAM and 512 GB SSD\\\",\\\"Delivery to the buyer office within 10 days included\\\",\\\"24-month parts and labour warranty included\\\"]\",10,\"USD\",1791903480,0,\"[\\\"0x6294026a69ee2E275ac60A27CA4Cc2120DF5EC0F\\\",\\\"0x806Da6e785769F0Ee8edE708A69e4259eF2992C6\\\",\\\"0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f\\\"]\",]\"method\":\"create_request\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ABE=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                17
+              ],
+              "readable": "2"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ABE=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                17
+              ],
+              "readable": "2"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree",
+        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+      }
+    },
+    {
+      "hash": "0x548a901f505a2b44f18e04aa6af05553db8fdf6b64b779e989be22b5807e3069",
+      "from": "0x6294026a69ee2E275ac60A27CA4Cc2120DF5EC0F",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          180,
+          7,
+          123,
+          34,
+          111,
+          117,
+          116,
+          99,
+          111,
+          109,
+          101,
+          34,
+          58,
+          34,
+          114,
+          97,
+          110,
+          107,
+          101,
+          100,
+          34,
+          44,
+          34,
+          114,
+          97,
+          110,
+          107,
+          105,
+          110,
+          103,
+          34,
+          58,
+          91,
+          48,
+          44,
+          49,
+          93,
+          44,
+          34,
+          114,
+          97,
+          110,
+          107,
+          105,
+          110,
+          103,
+          95,
+          104,
+          97,
+          115,
+          104,
+          34,
+          58,
+          34,
+          52,
+          102,
+          51,
+          53,
+          98,
+          52,
+          51,
+          53,
+          48,
+          55,
+          50,
+          56,
+          97,
+          56,
+          49,
+          48,
+          97,
+          54,
+          99,
+          57,
+          49,
+          54,
+          97,
+          102,
+          57,
+          53,
+          56,
+          101,
+          100,
+          50,
+          56,
+          50,
+          57,
+          55,
+          54,
+          102,
+          52,
+          53,
+          101,
+          50,
+          52,
+          57,
+          97,
+          102,
+          48,
+          101,
+          50,
+          50,
+          57,
+          48,
+          53,
+          48,
+          54,
+          102,
+          49,
+          97,
+          101,
+          55,
+          98,
+          54,
+          100,
+          54,
+          57,
+          98,
+          34,
+          125
+        ],
+        "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[0,1],\\\"ranking_hash\\\":\\\"4f35b4350728a810a6c916af958ed282976f45e249af0e2290506f1ae7b6d69b\\\"}\""
+      },
+      "method": "{\"args\":[1,]\"method\":\"finalize_request\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ALQHeyJvdXRjb21lIjoicmFua2VkIiwicmFua2luZyI6WzAsMV0sInJhbmtpbmdfaGFzaCI6IjRmMzViNDM1MDcyOGE4MTBhNmM5MTZhZjk1OGVkMjgyOTc2ZjQ1ZTI0OWFmMGUyMjkwNTA2ZjFhZTdiNmQ2OWIifQ==",
+            "status": "return",
+            "payload": {
+              "raw": [
+                180,
+                7,
+                123,
+                34,
+                111,
+                117,
+                116,
+                99,
+                111,
+                109,
+                101,
+                34,
+                58,
+                34,
+                114,
+                97,
+                110,
+                107,
+                101,
+                100,
+                34,
+                44,
+                34,
+                114,
+                97,
+                110,
+                107,
+                105,
+                110,
+                103,
+                34,
+                58,
+                91,
+                48,
+                44,
+                49,
+                93,
+                44,
+                34,
+                114,
+                97,
+                110,
+                107,
+                105,
+                110,
+                103,
+                95,
+                104,
+                97,
+                115,
+                104,
+                34,
+                58,
+                34,
+                52,
+                102,
+                51,
+                53,
+                98,
+                52,
+                51,
+                53,
+                48,
+                55,
+                50,
+                56,
+                97,
+                56,
+                49,
+                48,
+                97,
+                54,
+                99,
+                57,
+                49,
+                54,
+                97,
+                102,
+                57,
+                53,
+                56,
+                101,
+                100,
+                50,
+                56,
+                50,
+                57,
+                55,
+                54,
+                102,
+                52,
+                53,
+                101,
+                50,
+                52,
+                57,
+                97,
+                102,
+                48,
+                101,
+                50,
+                50,
+                57,
+                48,
+                53,
+                48,
+                54,
+                102,
+                49,
+                97,
+                101,
+                55,
+                98,
+                54,
+                100,
+                54,
+                57,
+                98,
+                34,
+                125
+              ],
+              "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[0,1],\\\"ranking_hash\\\":\\\"4f35b4350728a810a6c916af958ed282976f45e249af0e2290506f1ae7b6d69b\\\"}\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ALQHeyJvdXRjb21lIjoicmFua2VkIiwicmFua2luZyI6WzAsMV0sInJhbmtpbmdfaGFzaCI6IjRmMzViNDM1MDcyOGE4MTBhNmM5MTZhZjk1OGVkMjgyOTc2ZjQ1ZTI0OWFmMGUyMjkwNTA2ZjFhZTdiNmQ2OWIifQ==",
+            "status": "return",
+            "payload": {
+              "raw": [
+                180,
+                7,
+                123,
+                34,
+                111,
+                117,
+                116,
+                99,
+                111,
+                109,
+                101,
+                34,
+                58,
+                34,
+                114,
+                97,
+                110,
+                107,
+                101,
+                100,
+                34,
+                44,
+                34,
+                114,
+                97,
+                110,
+                107,
+                105,
+                110,
+                103,
+                34,
+                58,
+                91,
+                48,
+                44,
+                49,
+                93,
+                44,
+                34,
+                114,
+                97,
+                110,
+                107,
+                105,
+                110,
+                103,
+                95,
+                104,
+                97,
+                115,
+                104,
+                34,
+                58,
+                34,
+                52,
+                102,
+                51,
+                53,
+                98,
+                52,
+                51,
+                53,
+                48,
+                55,
+                50,
+                56,
+                97,
+                56,
+                49,
+                48,
+                97,
+                54,
+                99,
+                57,
+                49,
+                54,
+                97,
+                102,
+                57,
+                53,
+                56,
+                101,
+                100,
+                50,
+                56,
+                50,
+                57,
+                55,
+                54,
+                102,
+                52,
+                53,
+                101,
+                50,
+                52,
+                57,
+                97,
+                102,
+                48,
+                101,
+                50,
+                50,
+                57,
+                48,
+                53,
+                48,
+                54,
+                102,
+                49,
+                97,
+                101,
+                55,
+                98,
+                54,
+                100,
+                54,
+                57,
+                98,
+                34,
+                125
+              ],
+              "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[0,1],\\\"ranking_hash\\\":\\\"4f35b4350728a810a6c916af958ed282976f45e249af0e2290506f1ae7b6d69b\\\"}\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree"
+      }
+    },
+    {
+      "hash": "0x3bc61c6f4f41c362a13f97aed4a1ee593f138afe30fb261d625371dfa209374b",
+      "from": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          1
+        ],
+        "readable": "0"
+      },
+      "method": "{\"args\":[2,\"Mutable evidence (unverified fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/main/public/quotes/revision2/mutable-recovery.txt\",\"deacad6b93b13a0ecef547fbdd8ecb7cf174d1e9302d851d01888c15495ce5f4\",90000,0,0,0,7,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAE=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                1
+              ],
+              "readable": "0"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "idle",
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "agree",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "idle"
+      }
+    },
+    {
+      "hash": "0xec93ec9305e5221d183d4bd6401366e89a44a2f962d61027ff6837e013544bdb",
+      "from": "0x806Da6e785769F0Ee8edE708A69e4259eF2992C6",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": false,
+      "execution": "document changed or incorrect hash",
+      "method": "{\"args\":[2,\"Fast (unverified fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/22bed3b6b01d98145900ec70cb5f552fea2bfbc4/public/quotes/revision2/fast.txt\",\"57767c19b9226ca8b1cfb534a9c2e64a4e52959a80224b13f7ca45048bb1d4ad\",90000,0,0,0,5,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AWRvY3VtZW50IGNoYW5nZWQgb3IgaW5jb3JyZWN0IGhhc2g=",
+            "status": "rollback",
+            "payload": "document changed or incorrect hash"
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AWRvY3VtZW50IGNoYW5nZWQgb3IgaW5jb3JyZWN0IGhhc2g=",
+            "status": "rollback",
+            "payload": "document changed or incorrect hash"
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "idle",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree"
+      }
+    },
+    {
+      "hash": "0xb3fadfaecb8618d22636b824c7646b8380ae68151f839c5e96adaefb5fd0ab13",
+      "from": "0x6294026a69ee2E275ac60A27CA4Cc2120DF5EC0F",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          9
+        ],
+        "readable": "1"
+      },
+      "method": "{\"args\":[2,\"Atlas Supply (test fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/17e07f30f0a89a5bad90ba40bf9e80613f33b271/public/quotes/atlas.txt\",\"6447b220ca6d48ceb7d1334588e4982477bcd3eb8677a3f75e0ffb0cd6fd4eef\",90000,0,0,0,7,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AAk=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                9
+              ],
+              "readable": "1"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree"
+      }
+    },
+    {
+      "hash": "0x628b066d3186e318f56a669b8fe33eb3da5b301473d4cde478ae2d1a470f6b13",
+      "from": "0x806Da6e785769F0Ee8edE708A69e4259eF2992C6",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          17
+        ],
+        "readable": "2"
+      },
+      "method": "{\"args\":[2,\"Fast (unverified fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/22bed3b6b01d98145900ec70cb5f552fea2bfbc4/public/quotes/revision2/fast.txt\",\"29f440d531f49c16d211abad22f71168639751f0827b2f2a20d43e760506574b\",90000,0,0,0,5,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ABE=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                17
+              ],
+              "readable": "2"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ABE=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                17
+              ],
+              "readable": "2"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "idle",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "idle"
+      }
+    },
+    {
+      "hash": "0x51d4730c4ff25d72a7542fb374e672cfb74ea18d1e29e818bc94619887d37bac",
+      "from": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "method": "{\"args\":[2,0,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "agree",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "idle",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "idle"
+      }
+    },
+    {
+      "hash": "0xb6039e7746e0d215ed47b64023ff627e8e42a87254a6a59797dc8bbaa81be44b",
+      "from": "0x6294026a69ee2E275ac60A27CA4Cc2120DF5EC0F",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "method": "{\"args\":[2,1,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "idle",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree"
+      }
+    },
+    {
+      "hash": "0x6d5a4b4ae394c660ce6c0c58bdd747b9d9db4152074963cba3339a30c52b8317",
+      "from": "0x806Da6e785769F0Ee8edE708A69e4259eF2992C6",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "method": "{\"args\":[2,2,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AExxdWFsaWZpZWQ=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                76,
+                113,
+                117,
+                97,
+                108,
+                105,
+                102,
+                105,
+                101,
+                100
+              ],
+              "readable": "\"qualified\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "idle",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "idle",
+        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree"
+      }
+    },
+    {
+      "hash": "0xe1ce24b4595fd680f5c1a34eba4f4ddf9399d705bb97f6b845e5ca38095a0338",
+      "from": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          25
+        ],
+        "readable": "3"
+      },
+      "method": "{\"args\":[2,\"Undetermined warranty (unverified fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/e7b6eee64b84426737261494e1499b630704cb2d/public/quotes/revision2/undetermined-warranty.txt\",\"3be4d7e46f62bf28f67985d7e3f78f3a67ee645ed7e121ccdb73dfe6b5ee6498\",90000,0,0,0,7,]\"method\":\"submit_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ABk=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                25
+              ],
+              "readable": "3"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ABk=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                25
+              ],
+              "readable": "3"
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "idle",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "idle",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "agree"
+      }
+    },
+    {
+      "hash": "0xba8086287df022df36e0fc32dccc49165e1d0411a367582da56795452010fc77",
+      "from": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          100,
+          105,
+          110,
+          99,
+          111,
+          110,
+          99,
+          108,
+          117,
+          115,
+          105,
+          118,
+          101
+        ],
+        "readable": "\"inconclusive\""
+      },
+      "method": "{\"args\":[2,3,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AGRpbmNvbmNsdXNpdmU=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                100,
+                105,
+                110,
+                99,
+                111,
+                110,
+                99,
+                108,
+                117,
+                115,
+                105,
+                118,
+                101
+              ],
+              "readable": "\"inconclusive\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AGRpbmNvbmNsdXNpdmU=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                100,
+                105,
+                110,
+                99,
+                111,
+                110,
+                99,
+                108,
+                117,
+                115,
+                105,
+                118,
+                101
+              ],
+              "readable": "\"inconclusive\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "idle",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+      }
+    },
+    {
+      "hash": "0xc427d839fc360904e991df8a198de717c8755c2f83611a2d2ebcf1b1b523b9cb",
+      "from": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          100,
+          105,
+          110,
+          99,
+          111,
+          110,
+          99,
+          108,
+          117,
+          115,
+          105,
+          118,
+          101
+        ],
+        "readable": "\"inconclusive\""
+      },
+      "method": "{\"args\":[2,3,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AGRpbmNvbmNsdXNpdmU=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                100,
+                105,
+                110,
+                99,
+                111,
+                110,
+                99,
+                108,
+                117,
+                115,
+                105,
+                118,
+                101
+              ],
+              "readable": "\"inconclusive\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "ERROR",
+          "result": {
+            "raw": "AmlkbGU=",
+            "status": "contract_error",
+            "payload": "idle"
+          },
+          "genvm_result": {
+            "stderr": "Validator execution cancelled after quorum",
+            "stdout": "",
+            "raw_error": {
+              "fatal": false,
+              "causes": [
+                "VALIDATOR_QUORUM_REACHED"
+              ]
+            },
+            "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+          }
+        }
+      ],
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "idle",
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree"
+      }
+    },
+    {
+      "hash": "0x676f5f159705b5c16d00079efdaf40b460452e0ee5a45c4860ffb545b8594be4",
+      "from": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          100,
+          105,
+          110,
+          99,
+          111,
+          110,
+          99,
+          108,
+          117,
+          115,
+          105,
+          118,
+          101
+        ],
+        "readable": "\"inconclusive\""
+      },
+      "method": "{\"args\":[2,3,]\"method\":\"evaluate_quote\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AGRpbmNvbmNsdXNpdmU=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                100,
+                105,
+                110,
+                99,
+                111,
+                110,
+                99,
+                108,
+                117,
+                115,
+                105,
+                118,
+                101
+              ],
+              "readable": "\"inconclusive\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "AGRpbmNvbmNsdXNpdmU=",
+            "status": "return",
+            "payload": {
+              "raw": [
+                100,
+                105,
+                110,
+                99,
+                111,
+                110,
+                99,
+                108,
+                117,
+                115,
+                105,
+                118,
+                101
+              ],
+              "readable": "\"inconclusive\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "idle",
+        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+      }
+    },
+    {
+      "hash": "0xf2ac503a18b617dde36fb790e77389d7087a84404efbbd7bbc243fb2f376503c",
+      "from": "0x2c21D725448c27217969C88CE4f43F22792DE267",
+      "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          180,
+          7,
+          123,
+          34,
+          111,
+          117,
+          116,
+          99,
+          111,
+          109,
+          101,
+          34,
+          58,
+          34,
+          114,
+          97,
+          110,
+          107,
+          101,
+          100,
+          34,
+          44,
+          34,
+          114,
+          97,
+          110,
+          107,
+          105,
+          110,
+          103,
+          34,
+          58,
+          91,
+          50,
+          44,
+          49,
+          93,
+          44,
+          34,
+          114,
+          97,
+          110,
+          107,
+          105,
+          110,
+          103,
+          95,
+          104,
+          97,
+          115,
+          104,
+          34,
+          58,
+          34,
+          100,
+          48,
+          102,
+          50,
+          49,
+          51,
+          51,
+          54,
+          101,
+          48,
+          97,
+          52,
+          52,
+          101,
+          97,
+          56,
+          51,
+          99,
+          52,
+          51,
+          48,
+          55,
+          56,
+          97,
+          52,
+          98,
+          99,
+          101,
+          102,
+          97,
+          99,
+          100,
+          49,
+          57,
+          57,
+          51,
+          50,
+          50,
+          53,
+          56,
+          49,
+          97,
+          98,
+          98,
+          99,
+          101,
+          53,
+          51,
+          57,
+          55,
+          99,
+          52,
+          101,
+          51,
+          48,
+          97,
+          55,
+          102,
+          54,
+          102,
+          55,
+          50,
+          51,
+          55,
+          34,
+          125
+        ],
+        "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[2,1],\\\"ranking_hash\\\":\\\"d0f21336e0a44ea83c43078a4bcefacd199322581abbce5397c4e30a7f6f7237\\\"}\""
+      },
+      "method": "{\"args\":[2,]\"method\":\"finalize_request\"}",
+      "leader_only": false,
+      "leader_receipts": [
+        {
+          "mode": "leader",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ALQHeyJvdXRjb21lIjoicmFua2VkIiwicmFua2luZyI6WzIsMV0sInJhbmtpbmdfaGFzaCI6ImQwZjIxMzM2ZTBhNDRlYTgzYzQzMDc4YTRiY2VmYWNkMTk5MzIyNTgxYWJiY2U1Mzk3YzRlMzBhN2Y2ZjcyMzcifQ==",
+            "status": "return",
+            "payload": {
+              "raw": [
+                180,
+                7,
+                123,
+                34,
+                111,
+                117,
+                116,
+                99,
+                111,
+                109,
+                101,
+                34,
+                58,
+                34,
+                114,
+                97,
+                110,
+                107,
+                101,
+                100,
+                34,
+                44,
+                34,
+                114,
+                97,
+                110,
+                107,
+                105,
+                110,
+                103,
+                34,
+                58,
+                91,
+                50,
+                44,
+                49,
+                93,
+                44,
+                34,
+                114,
+                97,
+                110,
+                107,
+                105,
+                110,
+                103,
+                95,
+                104,
+                97,
+                115,
+                104,
+                34,
+                58,
+                34,
+                100,
+                48,
+                102,
+                50,
+                49,
+                51,
+                51,
+                54,
+                101,
+                48,
+                97,
+                52,
+                52,
+                101,
+                97,
+                56,
+                51,
+                99,
+                52,
+                51,
+                48,
+                55,
+                56,
+                97,
+                52,
+                98,
+                99,
+                101,
+                102,
+                97,
+                99,
+                100,
+                49,
+                57,
+                57,
+                51,
+                50,
+                50,
+                53,
+                56,
+                49,
+                97,
+                98,
+                98,
+                99,
+                101,
+                53,
+                51,
+                57,
+                55,
+                99,
+                52,
+                101,
+                51,
+                48,
+                97,
+                55,
+                102,
+                54,
+                102,
+                55,
+                50,
+                51,
+                55,
+                34,
+                125
+              ],
+              "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[2,1],\\\"ranking_hash\\\":\\\"d0f21336e0a44ea83c43078a4bcefacd199322581abbce5397c4e30a7f6f7237\\\"}\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        },
+        {
+          "mode": "validator",
+          "execution_result": "SUCCESS",
+          "result": {
+            "raw": "ALQHeyJvdXRjb21lIjoicmFua2VkIiwicmFua2luZyI6WzIsMV0sInJhbmtpbmdfaGFzaCI6ImQwZjIxMzM2ZTBhNDRlYTgzYzQzMDc4YTRiY2VmYWNkMTk5MzIyNTgxYWJiY2U1Mzk3YzRlMzBhN2Y2ZjcyMzcifQ==",
+            "status": "return",
+            "payload": {
+              "raw": [
+                180,
+                7,
+                123,
+                34,
+                111,
+                117,
+                116,
+                99,
+                111,
+                109,
+                101,
+                34,
+                58,
+                34,
+                114,
+                97,
+                110,
+                107,
+                101,
+                100,
+                34,
+                44,
+                34,
+                114,
+                97,
+                110,
+                107,
+                105,
+                110,
+                103,
+                34,
+                58,
+                91,
+                50,
+                44,
+                49,
+                93,
+                44,
+                34,
+                114,
+                97,
+                110,
+                107,
+                105,
+                110,
+                103,
+                95,
+                104,
+                97,
+                115,
+                104,
+                34,
+                58,
+                34,
+                100,
+                48,
+                102,
+                50,
+                49,
+                51,
+                51,
+                54,
+                101,
+                48,
+                97,
+                52,
+                52,
+                101,
+                97,
+                56,
+                51,
+                99,
+                52,
+                51,
+                48,
+                55,
+                56,
+                97,
+                52,
+                98,
+                99,
+                101,
+                102,
+                97,
+                99,
+                100,
+                49,
+                57,
+                57,
+                51,
+                50,
+                50,
+                53,
+                56,
+                49,
+                97,
+                98,
+                98,
+                99,
+                101,
+                53,
+                51,
+                57,
+                55,
+                99,
+                52,
+                101,
+                51,
+                48,
+                97,
+                55,
+                102,
+                54,
+                102,
+                55,
+                50,
+                51,
+                55,
+                34,
+                125
+              ],
+              "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[2,1],\\\"ranking_hash\\\":\\\"d0f21336e0a44ea83c43078a4bcefacd199322581abbce5397c4e30a7f6f7237\\\"}\""
+            }
+          },
+          "genvm_result": {
+            "stderr": "",
+            "stdout": "",
+            "raw_error": null,
+            "error_code": null,
+            "error_description": null
+          }
+        }
+      ],
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree"
+      }
+    }
+  ]
+}

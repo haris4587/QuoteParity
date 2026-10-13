@@ -1,0 +1,133 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "create_request": {
+      "params": [
+        [
+          "title",
+          "string"
+        ],
+        [
+          "requirements_json",
+          "string"
+        ],
+        [
+          "quantity",
+          "int"
+        ],
+        [
+          "currency",
+          "string"
+        ],
+        [
+          "deadline",
+          "int"
+        ],
+        [
+          "daily_penalty",
+          "int"
+        ],
+        [
+          "supplier_wallets_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": false
+    },
+    "evaluate_quote": {
+      "params": [
+        [
+          "request_id",
+          "int"
+        ],
+        [
+          "bid_id",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "finalize_request": {
+      "params": [
+        [
+          "request_id",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "get_request": {
+      "params": [
+        [
+          "request_id",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_state": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "submit_quote": {
+      "params": [
+        [
+          "request_id",
+          "int"
+        ],
+        [
+          "supplier",
+          "string"
+        ],
+        [
+          "url",
+          "string"
+        ],
+        [
+          "expected_hash",
+          "string"
+        ],
+        [
+          "unit_price",
+          "int"
+        ],
+        [
+          "delivery",
+          "int"
+        ],
+        [
+          "warranty",
+          "int"
+        ],
+        [
+          "tax",
+          "int"
+        ],
+        [
+          "delivery_days",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": false
+    }
+  }
+}

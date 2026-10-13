@@ -1,0 +1,66 @@
+{
+  "hash": "0x628b066d3186e318f56a669b8fe33eb3da5b301473d4cde478ae2d1a470f6b13",
+  "from": "0x806Da6e785769F0Ee8edE708A69e4259eF2992C6",
+  "to": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+  "status": "FINALIZED",
+  "successful": true,
+  "execution": {
+    "raw": [
+      17
+    ],
+    "readable": "2"
+  },
+  "method": "{\"args\":[2,\"Fast (unverified fixture)\",\"https://raw.githubusercontent.com/haris4587/QuoteParity/22bed3b6b01d98145900ec70cb5f552fea2bfbc4/public/quotes/revision2/fast.txt\",\"29f440d531f49c16d211abad22f71168639751f0827b2f2a20d43e760506574b\",90000,0,0,0,5,]\"method\":\"submit_quote\"}",
+  "leader_only": false,
+  "leader_receipts": [
+    {
+      "mode": "leader",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "ABE=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            17
+          ],
+          "readable": "2"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    },
+    {
+      "mode": "validator",
+      "execution_result": "SUCCESS",
+      "result": {
+        "raw": "ABE=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            17
+          ],
+          "readable": "2"
+        }
+      },
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      }
+    }
+  ],
+  "votes": {
+    "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+    "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+    "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+    "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "idle",
+    "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "idle"
+  }
+}

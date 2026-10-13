@@ -1,90 +1,74 @@
-> **2026-10-13 revision status:** The website is public. Supplier names are explicitly unverified claims. A prepared steward revision adds reserved invited-wallet slots, safe replacement and conservative malformed-model handling. It is **not deployed yet**, and the requested expanded live tests remain pending. See [STEWARD-REVISION.md](docs/STEWARD-REVISION.md). The app still uses the original contract and the download at `public/quote_parity.py` matches that source.
+# QuoteParity — comparable supplier bids
 
-# QuoteParity
+QuoteParity uses GenLayer to assess documented supplier scope and exclusions, then ranks qualifying bids using immutable purchasing terms and integer arithmetic. Supplier names are **unverified claims**. Wallet signatures establish wallet control, not authority to represent a company.
 
-**Comparable supplier bids, with GenLayer verifying scope before deterministic cost ranking.**
+- Public app: https://quoteparity.itzanza2.chatgpt.site
+- Repository: https://github.com/haris4587/QuoteParity
+- Current contract: https://explorer-studio.genlayer.com/address/0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7
+- Full Consensus deployment: https://explorer-studio.genlayer.com/tx/0xfd57b095db158a4c55ad28bcc9bbe3a202245104c64e3800e7940f8910c6c2aa
+- Network: stable Studionet, chain ID 61999, RPC https://studio.genlayer.com/api, genlayer-js 1.1.8.
 
-A buyer commits purchasing requirements, quantity, currency, deadline and a daily delivery cost. Suppliers submit structured prices and a hash-pinned public quote. An Intelligent Contract independently fetches the document and uses validator consensus to decide whether the quote covers each requirement and matches every structured price. Only qualifying offers enter the published ranking formula.
+## Main workflow
 
-## Deployment
+1. Use **Create test account** in the app. It generates a session-only test signer and uses the Studionet faucet; no external wallet extension is connected. Use **Account address** to share a supplier's public address with the buyer. Private keys are never exported in the evidence.
+2. A separate buyer account creates a purchase request, committing requirements, quantity, currency, bid/review deadlines, delivery-time cost and an immutable roster of 1–20 invited supplier wallets. The buyer cannot also be a supplier in that request. Roster admission is buyer curation, not corporate authentication.
+3. Each invited wallet owns one reserved active slot and can submit at most three successful quotes. Uninvited Sybil wallets cannot consume capacity; one invited wallet cannot consume another's slot. Failed source/hash admission does not use an attempt. A new valid submission supersedes only that sender's previous bid, preserving its history.
+4. Suppliers submit structured integer prices and a public document's SHA-256. Validators independently retrieve it during admission and again during assessment. Supported evidence is UTF-8 text, JSON or static HTML, 1–32,000 bytes. Pin normal evidence to a version; a deliberately mutable fixture is used only for the source-change test.
+5. Any account can request an independent validator assessment. Each committed requirement is `covered`, `excluded` or `unclear`; price consistency is Boolean. All decision-critical normalized fields require strict agreement. A quote qualifies only with unchanged evidence, full coverage and matching prices.
+6. After the bid deadline, anyone can finalize when active reviews are resolved or exhausted. Unresolved bids can hold finalization only until the committed 24-hour review timeout; they never qualify automatically. Review attempts are bounded to three per bid. Only active qualifying bids rank.
 
-- Network: **GenLayer Studionet**, chain ID **61999**
-- Contract: [`0x52Bf9E533159ed35Bc473180b1C86908fFD67883`](https://explorer-studio.genlayer.com/address/0x52Bf9E533159ed35Bc473180b1C86908fFD67883)
-- Deployment transaction: [`0x01b62cd94e52506650928cc53a8c64ed66f6a5f064460d070ed4fd70aec332df`](https://explorer-studio.genlayer.com/tx/0x01b62cd94e52506650928cc53a8c64ed66f6a5f064460d070ed4fd70aec332df)
-- Deployment submitted through **GenLayer Studio's built-in account**, full consensus mode. No external wallet connection.
-- Website: [QuoteParity](https://quoteparity.itzanza2.chatgpt.site). Initially owner-private under Sites default access. Public source and chain evidence are accessible without this website. See `public/deployment.json` and `docs/live-run.json` for evidence.
+## Published arithmetic
 
-## Workflow
-
-1. **Commit a purchase request.** 1–12 immutable requirements, quantity, currency, bid deadline (30 seconds–30 days ahead), daily delivery cost in integer minor units.
-2. **Submit a public quote.** UTF-8 text, JSON or static HTML, at most 32 KB, HTTPS. Commit SHA-256 of the exact decoded UTF-8 document, unit price, delivery total, warranty total, tax total and delivery days. Validators independently fetch and hash the source at submission.
-3. **Evaluate scope.** Every validator re-fetches the pinned source. AI classifies each requirement as `covered`, `excluded` or `unclear` and checks structured prices against the quote. The custom equivalence validator independently repeats this task and requires exact normalized agreement. It does not accept the leader's conclusion without checking the public evidence.
-4. **Finalize comparison.** After bidding ends, anyone can finalize when all reviews are terminal, or after the 24-hour review timeout. Only `qualified` bids rank. Unresolved bids are excluded, never converted into eligibility.
-
-## Fixed formula
+All prices use currency minor units (100 cents = 1 USD).
 
 ```
-landed_cost = quantity × unit_price + delivery + warranty + tax
-score = landed_cost + daily_penalty × delivery_days
+landed_cost = quantity * unit_price + delivery + warranty + tax
+score = landed_cost + daily_penalty * delivery_days
+rank key = score, landed_cost, delivery_days, bid_id
 ```
 
-All amounts are integer minor units (100 cents = $1). Delivery, warranty and tax are **order totals**, not per-unit prices. Lowest score wins. Ties break by landed cost, delivery days, then bid ID. There is no currency conversion. The currency label does not implement currency-specific decimal exponents; this version uses two decimal places for all supported UI currencies.
+The formula and tie-breakers are committed before quotes. Ranking does not place an order, transfer funds or make a legal procurement award. No escrow is implemented or needed for the documented scope.
 
-## Trust boundaries
+## Verified live main comparison
 
-- Requirements and formula cannot be edited after request creation.
-- Submission limits: 20 bids/request, 3 bids/address, 100 requests/deployment. These are resource limits, not identity or Sybil prevention.
-- Duplicate URL or document digest in one request is disallowed.
-- Missing, oversized, non-UTF-8 or changed source is not proof. Review records explicit inconclusive outcomes. A bad hash or unavailable source at submission rejects the transaction.
-- At most three review attempts for pending/inconclusive bids. All completed reviews append immutable decision hashes and timestamps.
-- Source bodies are treated as untrusted evidence in the prompt. Models may still err; protocol consensus is not a guarantee of legal meaning, supplier identity, delivery, authenticity or honest pricing.
-- Qualified/rejected decisions are terminal within this contract. Protocol-level appeals are supplied by GenLayer; no custom buyer override or application appeal is implemented.
-- Scope review concerns the pinned document at the review time. It does not continuously monitor a supplier website after qualification.
-- This is a **procurement comparison** app. It does not create a legally binding award, send purchase orders, escrow funds or pay suppliers.
-- PDF/binary files, dynamic authenticated pages and documents over 32 KB are intentionally unsupported. Use a public text export containing the complete quote terms.
+Request #0 was created, populated, evaluated and finalized through the public app's signed transaction interface, using a separate buyer and six separate supplier wallets. Full Consensus was used for deployment and live writes; finalized receipts include GenVM results and validator votes. A read-only verification script checks latest-final network state and exact deployed-source equality.
 
-## Run locally
+| Final rank | Claimed supplier | Landed cost | Days | Score | Result |
+|---|---|---:|---:|---:|---|
+| 1 | Zephyr | $8,900 | 5 | $8,950 | qualified |
+| 2 | Twin | $8,900 | 5 | $8,950 | qualified |
+| 3 | Meridian | $8,990 | 8 | $9,070 | qualified |
+| 4 | Atlas | $9,000 | 7 | $9,070 | qualified |
+| — | Unclear | $8,600 | 4 | $8,640 | rejected |
+| — | Budget | $8,000 | 3 | $8,030 | rejected |
 
-```bash
+Exact ranking is `[2,3,1,0]`. Zephyr/Twin use bid-ID tie-breaking; Meridian/Atlas use lower landed cost at equal score. The intended ambiguous-warranty wording was actually classified as excluded by live validators; it is recorded as rejected, never relabeled as inconclusive. A separate incomplete-warranty test exercises conservative inconclusive handling. The mutable-source experiments returned unchanged cached content and qualified; they are not claimed as successful live source-change tests.
+
+The wrong-hash transaction failed without consuming a supplier attempt; that wallet subsequently submitted successfully. An uninvited Studio wallet failed admission while legitimate suppliers could participate. Incomplete-evidence review and finite retry exhaustion are documented in [the steward report](docs/STEWARD-REVISION.md).
+
+## Live inconclusive recovery and delivery tie
+
+Request #2 was created by a new independent buyer with three reserved supplier wallets. The two active qualifiers each cost $9,000 with zero delivery penalty: Fast delivers in 5 days and Atlas in 7 days. Final ranking `[2,1]` selects Fast by delivery duration. A third wallet replaced its own earlier offer with version-pinned incomplete warranty evidence; the earlier quote retains its history and is superseded. Three independent reviews remain INCONCLUSIVE, and finalization excludes that unresolved quote. Legitimate participation and ranking both remain possible. See [actual live report](docs/STEWARD-REVISION.md).
+
+## Error handling and trust limits
+
+- Malformed/oversized JSON, missing/extra fields, wrong types and invalid scope arrays produce conservative structured outcomes. Model exceptions and unavailable, oversized, non-UTF-8 or changed sources cannot qualify.
+- Each validator performs its own source fetch and assessment. Untrusted documents are evidence, never instructions. Hash commitments prove content equality, not supplier truthfulness or delivery performance.
+- This is a buyer-invited comparison, not an open marketplace. Invitations must be arranged outside the contract. The buyer chooses the immutable roster; the contract does not verify company authority.
+- Limits: 100 requests per deployment, 20 invited wallets per request, three accepted submissions per wallet, three reviews per bid, at most 60 archived bids / 20 current bids per request. Evidence portals requiring authentication, PDFs and dynamic browser rendering are unsupported.
+- All supplier fixtures are fictional. Studionet has temporary development-state availability; this is not a production purchasing system.
+
+## Development and evidence
+
+```
 npm ci
 npm test
-npm run dev
 npm run build
+npm run dev
 ```
 
-Python 3.10+ is required for tests. The frontend uses pinned `genlayer-js@1.1.8`, the stable npm release available at implementation time, and Vite. The SDK's installed source and type declarations are authoritative for the stable Studionet API; newer documentation also describes v2 preview methods not exposed by 1.1.8.
+Tests use an SDK-shaped deterministic mock harness plus JSDOM; they supplement real network executions and do not replace them. GenVM AST lint and SDK semantic validation pass with the pinned runner. See [validation](docs/VALIDATION.md), [current state](docs/revision2-state.json), [verification](docs/revision2-verification.json), [schema](docs/revision2-schema.json) and [finalized receipts](docs/revision2-receipts).
 
-## Wallet and finality
+`scripts/verify-revision2.mjs <transaction hashes...>` performs read-only RPC verification. It submits no transactions. `public/deployment.json`, the live-source download and `contracts/quote_parity.py` identify the same deployed revision. Historical October 3 evidence is preserved as baseline evidence.
 
-The deployed contract was created through Studio's built-in wallet. The website creates its own **session-only Studionet test account** using the SDK, with Studio's test faucet RPC. No external wallet connection, mainnet assets or seed phrase are requested. Keys stay in the current tab's `sessionStorage`; closing the browser session clears them. Do not use this development-only wallet for real assets. A new tab/account does not control prior buyer identities, but requests are immutable and reviews/finalization are permissionless.
-
-Writes call the real deployed contract with a local signing account, persist the transaction ID before waiting, and verify `FINALIZED` **and** a successful execution result (`FINISHED_WITH_RETURN` on protocol receipts or `SUCCESS` with a return result on stable Studio receipts). Pending IDs can be resumed rather than blindly resubmitted. Reads explicitly select `TransactionHashVariant.LATEST_FINAL`.
-
-## Tests
-
-`npm test` runs 15 deterministic Python contract tests with an SDK-shaped harness plus 6 frontend/receipt tests using JSDOM. Tests cover creation → submission → qualification → final ranking, exclusions, price mismatch, unavailable/changed sources, hash mismatch, deadlines, bounded retries, no post-finalization changes, duplicate limits, integer validation, formula arithmetic and tie-breaking. These mock tests do **not** execute GenVM or establish LLM accuracy. Frontend tests verify finalized-state reads, signed write construction, evidence display, cancelled-validator handling, rejection of a real failed receipt, and exact cents in large integer totals. Browser visual QA was unavailable because the managed preview browser skill was not available. The live Studionet run is separately documented under `docs/` with real transaction receipts and finalized-state reads.
-
-## API
-
-| Method | Purpose |
-|---|---|
-| `create_request(title, requirements_json, quantity, currency, deadline, daily_penalty)` | Commit immutable purchasing terms; returns ID |
-| `submit_quote(request_id, supplier, url, expected_hash, unit_price, delivery, warranty, tax, delivery_days)` | Commit quote and independently fetch pinned evidence |
-| `evaluate_quote(request_id, bid_id)` | Independent validator web/AI scope and price review |
-| `finalize_request(request_id)` | Freeze deterministic ranking after deadline/review rules |
-| `get_state()` | JSON database for comparison UI |
-| `get_request(request_id)` | JSON purchase request with bids and review history |
-
-## Official references checked
-
-- [Web-response SDK declaration](https://github.com/genlayerlabs/genvm/blob/main/runners/genlayer-py-std/src/genlayer/nondet/web.py): `Response.status`, `headers`, `body`. Some web documentation examples still use `status_code`; QuoteParity follows the declared SDK.
-- [Non-determinism](https://docs.genlayer.com/developers/intelligent-contracts/features/non-determinism)
-- [Reading data](https://docs.genlayer.com/developers/decentralized-applications/reading-data)
-- [Writing data](https://docs.genlayer.com/developers/decentralized-applications/writing-data)
-- [Studio](https://docs.genlayer.com/developers/intelligent-contracts/tools/genlayer-studio)
-
-The public quote fixtures in `public/quotes/` are explicitly fictional test evidence, not real supplier offers.
-
-## Verified live result
-
-Seven successful full-consensus transactions finalized on the corrected deployment: deployment, request creation, two submissions, two scope reviews and final ranking. Atlas qualified (all three requirements covered); Budget was rejected (delivery and warranty excluded). Ranking: `[0]`, Atlas score **$9,070.00** including the committed delivery-time cost. A separate late Meridian bid rolled back with `bidding closed`. See [live-run report](docs/live-run.json), [finalized state](docs/finalized-state.json), [Studio screenshot](docs/studio-proof.jpg), and [submission copy](docs/SUBMISSION.md).
+Official API references: [web access](https://docs.genlayer.com/developers/intelligent-contracts/features/web-access), [calling LLMs](https://docs.genlayer.com/developers/intelligent-contracts/features/calling-llms), [non-determinism](https://docs.genlayer.com/developers/intelligent-contracts/features/non-determinism), [networks](https://docs.genlayer.com/developers/networks), [GenVM linter](https://docs.genlayer.com/api-references/genlayer-linter).

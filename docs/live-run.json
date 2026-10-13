@@ -1,53 +1,209 @@
 {
-  "verifiedAt": "2026-10-03T18:23:03.427186+00:00",
-  "network": "studionet",
+  "checkedAt": "2026-10-13T15:02:40.235Z",
+  "network": "Studionet",
   "chainId": 61999,
-  "contract": "0x52Bf9E533159ed35Bc473180b1C86908fFD67883",
-  "studioWallet": "0x6fdA8D063111bC3aB3f2Df3c8f6e66d6ea8fAc4a",
-  "walletMode": "Studio built-in account; no external wallet connection",
-  "fullConsensus": true,
-  "contractSourceSha256": "f50452df185bfa8d74ea8d6899662fb13e855731643ffa686369d20d2acba570",
-  "deployedSourceMatchesRepository": true,
-  "requestId": 0,
-  "outcome": "ranked",
-  "ranking": [
-    0
-  ],
-  "rankingHash": "6f0e90a6e3318ae0d15cd6e84c5fabba2da7412cf1f5e61ca6330253b91c7269",
-  "termsHash": "3e866343aa35ca8b00f533ff45a5e0dde9fd1a29c80f9b8162ff56fe4bf7e2f4",
-  "bids": [
+  "contract": "0xBA2212A111f5e59d64A4F9d2E1217bF93903Fbf7",
+  "protocolVersion": 2,
+  "sourceSha256": "85fa245c7ef989b0a767ebdaad1f14e737041fa9a811f3b6f2fc57ab7af4bdc6",
+  "sourceMatches": true,
+  "readVariant": "LATEST_FINAL",
+  "website": "https://quoteparity.itzanza2.chatgpt.site",
+  "writesVia": "Public app transaction interface; deployment via Studio built-in wallet in Full Consensus",
+  "supplierIdentities": "fictional unverified claims",
+  "requests": [
     {
-      "supplier": "Atlas Supply (test fixture)",
-      "status": "qualified",
-      "landedCost": 900000,
-      "score": 907000,
-      "scope": [
-        "covered",
-        "covered",
-        "covered"
+      "id": 0,
+      "title": "Steward verification \u00b7 independent supplier bids",
+      "buyer": "0x64f7f82113ca72582ae1b35de4daa6545bcdf4b2",
+      "supplierWallets": [
+        "0xb73a984cbb9f49e390372953139fdf08e9fe122a",
+        "0x6a3d8991cb264def72616d631b6b30713fcea555",
+        "0x595169519f05799954e8f135f4a300bddff8d2f7",
+        "0xc88d7691fc65323baff8918c39fab4edc3641bb6",
+        "0xb4a9d3bf053bed98d2fe73b03aaad1b49c30d2de",
+        "0x566434f7d0ae1dd6a1565d833463be1c3ed65241"
       ],
-      "decisionHash": "d420ad96c6c13191ffbc9e74856245e8abfa32f1aa7ece4d5dce7debbd0224b9",
-      "documentHash": "6447b220ca6d48ceb7d1334588e4982477bcd3eb8677a3f75e0ffb0cd6fd4eef",
-      "url": "https://raw.githubusercontent.com/haris4587/QuoteParity/17e07f30f0a89a5bad90ba40bf9e80613f33b271/public/quotes/atlas.txt"
+      "closed": true,
+      "ranking": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "bids": [
+        {
+          "id": 0,
+          "supplier": "Atlas (unverified test fixture)",
+          "sender": "0xb73a984cbb9f49e390372953139fdf08e9fe122a",
+          "status": "qualified",
+          "supersededBy": null,
+          "reviewCount": 1,
+          "landedCost": 900000,
+          "deliveryDays": 7,
+          "score": 907000
+        },
+        {
+          "id": 1,
+          "supplier": "Meridian (unverified test fixture)",
+          "sender": "0x6a3d8991cb264def72616d631b6b30713fcea555",
+          "status": "qualified",
+          "supersededBy": null,
+          "reviewCount": 1,
+          "landedCost": 899000,
+          "deliveryDays": 8,
+          "score": 907000
+        },
+        {
+          "id": 2,
+          "supplier": "Zephyr (unverified test fixture)",
+          "sender": "0x595169519f05799954e8f135f4a300bddff8d2f7",
+          "status": "qualified",
+          "supersededBy": null,
+          "reviewCount": 1,
+          "landedCost": 890000,
+          "deliveryDays": 5,
+          "score": 895000
+        },
+        {
+          "id": 3,
+          "supplier": "Twin (unverified test fixture)",
+          "sender": "0xc88d7691fc65323baff8918c39fab4edc3641bb6",
+          "status": "qualified",
+          "supersededBy": null,
+          "reviewCount": 1,
+          "landedCost": 890000,
+          "deliveryDays": 5,
+          "score": 895000
+        },
+        {
+          "id": 4,
+          "supplier": "Unclear (unverified test fixture)",
+          "sender": "0x566434f7d0ae1dd6a1565d833463be1c3ed65241",
+          "status": "rejected",
+          "supersededBy": null,
+          "reviewCount": 1,
+          "landedCost": 860000,
+          "deliveryDays": 4,
+          "score": 864000
+        },
+        {
+          "id": 5,
+          "supplier": "Budget (unverified test fixture)",
+          "sender": "0xb4a9d3bf053bed98d2fe73b03aaad1b49c30d2de",
+          "status": "rejected",
+          "supersededBy": null,
+          "reviewCount": 1,
+          "landedCost": 800000,
+          "deliveryDays": 3,
+          "score": 803000
+        }
+      ]
     },
     {
-      "supplier": "Budget Devices (test fixture)",
-      "status": "rejected",
-      "landedCost": 800000,
-      "score": 803000,
-      "scope": [
-        "covered",
-        "excluded",
-        "excluded"
+      "id": 1,
+      "title": "Steward verification \u00b7 changed evidence cannot block ranking",
+      "buyer": "0x64f7f82113ca72582ae1b35de4daa6545bcdf4b2",
+      "supplierWallets": [
+        "0xb73a984cbb9f49e390372953139fdf08e9fe122a",
+        "0x566434f7d0ae1dd6a1565d833463be1c3ed65241"
       ],
-      "decisionHash": "ab40b88661de72783f6cb5ae247254a399434635cf198d8b6c37e8175d12b4a2",
-      "documentHash": "f7f2fc0674197d52e55a716045ccde97e04b874c84aa1ff0c389f4ed1d5dba34",
-      "url": "https://raw.githubusercontent.com/haris4587/QuoteParity/17e07f30f0a89a5bad90ba40bf9e80613f33b271/public/quotes/budget.txt"
+      "closed": true,
+      "ranking": [
+        0,
+        1
+      ],
+      "bids": [
+        {
+          "id": 0,
+          "supplier": "Atlas (unverified test fixture)",
+          "sender": "0xb73a984cbb9f49e390372953139fdf08e9fe122a",
+          "status": "qualified",
+          "supersededBy": null,
+          "reviewCount": 1,
+          "landedCost": 900000,
+          "deliveryDays": 7,
+          "score": 907000
+        },
+        {
+          "id": 1,
+          "supplier": "Recovery (unverified mutable-source fixture)",
+          "sender": "0x566434f7d0ae1dd6a1565d833463be1c3ed65241",
+          "status": "qualified",
+          "supersededBy": null,
+          "reviewCount": 1,
+          "landedCost": 900000,
+          "deliveryDays": 7,
+          "score": 907000
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Steward verification \u00b7 inconclusive recovery and delivery tie",
+      "buyer": "0x2c21d725448c27217969c88ce4f43f22792de267",
+      "supplierWallets": [
+        "0x6294026a69ee2e275ac60a27ca4cc2120df5ec0f",
+        "0x806da6e785769f0ee8ede708a69e4259ef2992c6",
+        "0x0930a0a8a4c3413b889faf6ef8c30149b9ed521f"
+      ],
+      "closed": true,
+      "ranking": [
+        2,
+        1
+      ],
+      "bids": [
+        {
+          "id": 0,
+          "supplier": "Mutable evidence (unverified fixture)",
+          "sender": "0x0930a0a8a4c3413b889faf6ef8c30149b9ed521f",
+          "status": "qualified",
+          "supersededBy": 3,
+          "reviewCount": 1,
+          "landedCost": 900000,
+          "deliveryDays": 7,
+          "score": 900000
+        },
+        {
+          "id": 1,
+          "supplier": "Atlas Supply (test fixture)",
+          "sender": "0x6294026a69ee2e275ac60a27ca4cc2120df5ec0f",
+          "status": "qualified",
+          "supersededBy": null,
+          "reviewCount": 1,
+          "landedCost": 900000,
+          "deliveryDays": 7,
+          "score": 900000
+        },
+        {
+          "id": 2,
+          "supplier": "Fast (unverified fixture)",
+          "sender": "0x806da6e785769f0ee8ede708a69e4259ef2992c6",
+          "status": "qualified",
+          "supersededBy": null,
+          "reviewCount": 1,
+          "landedCost": 900000,
+          "deliveryDays": 5,
+          "score": 900000
+        },
+        {
+          "id": 3,
+          "supplier": "Undetermined warranty (unverified fixture)",
+          "sender": "0x0930a0a8a4c3413b889faf6ef8c30149b9ed521f",
+          "status": "inconclusive",
+          "supersededBy": null,
+          "reviewCount": 3,
+          "landedCost": 900000,
+          "deliveryDays": 7,
+          "score": 900000
+        }
+      ]
     }
   ],
   "transactions": [
     {
-      "hash": "0x01b62cd94e52506650928cc53a8c64ed66f6a5f064460d070ed4fd70aec332df",
+      "hash": "0xfd57b095db158a4c55ad28bcc9bbe3a202245104c64e3800e7940f8910c6c2aa",
+      "method": "deploy",
+      "sender": "0xefE1C22C78Ec9B436D35eb65655c06f9A718039B",
       "status": "FINALIZED",
       "successful": true,
       "execution": {
@@ -56,10 +212,220 @@
         ],
         "readable": "null"
       },
-      "explorer": "https://explorer-studio.genlayer.com/tx/0x01b62cd94e52506650928cc53a8c64ed66f6a5f064460d070ed4fd70aec332df"
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xfd57b095db158a4c55ad28bcc9bbe3a202245104c64e3800e7940f8910c6c2aa"
     },
     {
-      "hash": "0x0e3441e1ce31ce9ed11690cbf05a1354ce671f45cdd5793eb5b4f3ac531a9ab0",
+      "hash": "0x483fec4ae98ef07c306d386cb1690e33b0db724e5078fb58c066e15c4e7e02e0",
+      "method": "create_request",
+      "sender": "0x64F7F82113cA72582aE1B35DE4daA6545BCDF4B2",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          1
+        ],
+        "readable": "0"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x483fec4ae98ef07c306d386cb1690e33b0db724e5078fb58c066e15c4e7e02e0"
+    },
+    {
+      "hash": "0x622f14de1d404bd1bcf1c2dc04554cdaa5ed7a7bab0c493fa640dca74aff9f28",
+      "method": "submit_quote",
+      "sender": "0xb73A984cBb9f49E390372953139fdf08e9fe122A",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          1
+        ],
+        "readable": "0"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x622f14de1d404bd1bcf1c2dc04554cdaa5ed7a7bab0c493fa640dca74aff9f28"
+    },
+    {
+      "hash": "0x3af078a5bfc5236401dd81b5f5a5990cb1aaa6cd56389e57140e396117a3e83e",
+      "method": "submit_quote",
+      "sender": "0x6a3d8991cB264DEF72616d631b6b30713fCea555",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          9
+        ],
+        "readable": "1"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x3af078a5bfc5236401dd81b5f5a5990cb1aaa6cd56389e57140e396117a3e83e"
+    },
+    {
+      "hash": "0xd669e3c45ed8e4c21a51f1c4071a334c6567ba2feaa0c7692bba0081d35a071f",
+      "method": "submit_quote",
+      "sender": "0x595169519f05799954e8F135f4A300BddFF8d2f7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          17
+        ],
+        "readable": "2"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xd669e3c45ed8e4c21a51f1c4071a334c6567ba2feaa0c7692bba0081d35a071f"
+    },
+    {
+      "hash": "0x13b7924cad1d1357ae5f259f3ed850cf8b398490a4bf8be2c0b93c27a9370415",
+      "method": "submit_quote",
+      "sender": "0xC88d7691FC65323BAfF8918C39fab4edc3641bB6",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          25
+        ],
+        "readable": "3"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x13b7924cad1d1357ae5f259f3ed850cf8b398490a4bf8be2c0b93c27a9370415"
+    },
+    {
+      "hash": "0xce7b6fed1238fa82922cde5a699aa9698a8eb507d9978ec45b2611cadee04d6c",
+      "method": "submit_quote",
+      "sender": "0xb4a9D3Bf053Bed98d2Fe73b03AAad1B49C30D2De",
+      "status": "FINALIZED",
+      "successful": false,
+      "execution": "document changed or incorrect hash",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xce7b6fed1238fa82922cde5a699aa9698a8eb507d9978ec45b2611cadee04d6c"
+    },
+    {
+      "hash": "0x4621a4b9ffc46c3a3e8a4a1c97f7a77bec994603041bc7abc795be7c60fe7b72",
+      "method": "submit_quote",
+      "sender": "0x566434F7D0ae1dd6A1565D833463be1c3ed65241",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          33
+        ],
+        "readable": "4"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x4621a4b9ffc46c3a3e8a4a1c97f7a77bec994603041bc7abc795be7c60fe7b72"
+    },
+    {
+      "hash": "0x22b24b8209f31b427d5b2fd06bfda14521196dd8910689288a1476ae0010c825",
+      "method": "submit_quote",
+      "sender": "0xefE1C22C78Ec9B436D35eb65655c06f9A718039B",
+      "status": "FINALIZED",
+      "successful": false,
+      "execution": "supplier wallet not invited",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x22b24b8209f31b427d5b2fd06bfda14521196dd8910689288a1476ae0010c825"
+    },
+    {
+      "hash": "0x855d25d9636b9e702803193b7f81287474a283cbe8eb5833abb037498d05385e",
+      "method": "submit_quote",
+      "sender": "0xb4a9D3Bf053Bed98d2Fe73b03AAad1B49C30D2De",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          41
+        ],
+        "readable": "5"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x855d25d9636b9e702803193b7f81287474a283cbe8eb5833abb037498d05385e"
+    },
+    {
+      "hash": "0x9a326eb4ef96f433edf8105dcc74ecc8aa976f1f064d354c285de6edd88424de",
+      "method": "evaluate_quote",
+      "sender": "0xb73A984cBb9f49E390372953139fdf08e9fe122A",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x9a326eb4ef96f433edf8105dcc74ecc8aa976f1f064d354c285de6edd88424de"
+    },
+    {
+      "hash": "0x1e1f7c6e06fe5ec98099df04ff86341c106ccb3f842222efcf9275913ef51d5a",
+      "method": "evaluate_quote",
+      "sender": "0x6a3d8991cB264DEF72616d631b6b30713fCea555",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x1e1f7c6e06fe5ec98099df04ff86341c106ccb3f842222efcf9275913ef51d5a"
+    },
+    {
+      "hash": "0xdebdd97f8abe8479082249eeb48289af04dc85dd354732fd593ff22d05fe9d87",
+      "method": "evaluate_quote",
+      "sender": "0x595169519f05799954e8F135f4A300BddFF8d2f7",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xdebdd97f8abe8479082249eeb48289af04dc85dd354732fd593ff22d05fe9d87"
+    },
+    {
+      "hash": "0x0265da3dc8d2311934c67a181dc3d797e90b2fed77ff9365ac57755db85938ed",
+      "method": "evaluate_quote",
+      "sender": "0xC88d7691FC65323BAfF8918C39fab4edc3641bB6",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x0265da3dc8d2311934c67a181dc3d797e90b2fed77ff9365ac57755db85938ed"
+    },
+    {
+      "hash": "0x74410ed263a5ae896a6a37575c6add58295199402b634e974dd678cbdc7b8dee",
+      "method": "evaluate_quote",
+      "sender": "0xb4a9D3Bf053Bed98d2Fe73b03AAad1B49C30D2De",
       "status": "FINALIZED",
       "successful": true,
       "execution": {
@@ -76,15 +442,278 @@
         ],
         "readable": "\"rejected\""
       },
-      "explorer": "https://explorer-studio.genlayer.com/tx/0x0e3441e1ce31ce9ed11690cbf05a1354ce671f45cdd5793eb5b4f3ac531a9ab0"
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x74410ed263a5ae896a6a37575c6add58295199402b634e974dd678cbdc7b8dee"
     },
     {
-      "hash": "0x3bface4d5a2e6f8e16087ad448749fa0a303fafd4205ec6014f206496fb4c242",
+      "hash": "0xd8c1c5a67f1d89262e291f661c49c728cd3abc2239745e99557c1f8fe5cc82db",
+      "method": "evaluate_quote",
+      "sender": "0x566434F7D0ae1dd6A1565D833463be1c3ed65241",
       "status": "FINALIZED",
       "successful": true,
       "execution": {
         "raw": [
-          164,
+          68,
+          114,
+          101,
+          106,
+          101,
+          99,
+          116,
+          101,
+          100
+        ],
+        "readable": "\"rejected\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xd8c1c5a67f1d89262e291f661c49c728cd3abc2239745e99557c1f8fe5cc82db"
+    },
+    {
+      "hash": "0x70335913fec8445d800a0b68bbf15f1e764204c6b2bd9fa24aace419bb7cb1ed",
+      "method": "finalize_request",
+      "sender": "0x64F7F82113cA72582aE1B35DE4daA6545BCDF4B2",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          212,
+          7,
+          123,
+          34,
+          111,
+          117,
+          116,
+          99,
+          111,
+          109,
+          101,
+          34,
+          58,
+          34,
+          114,
+          97,
+          110,
+          107,
+          101,
+          100,
+          34,
+          44,
+          34,
+          114,
+          97,
+          110,
+          107,
+          105,
+          110,
+          103,
+          34,
+          58,
+          91,
+          50,
+          44,
+          51,
+          44,
+          49,
+          44,
+          48,
+          93,
+          44,
+          34,
+          114,
+          97,
+          110,
+          107,
+          105,
+          110,
+          103,
+          95,
+          104,
+          97,
+          115,
+          104,
+          34,
+          58,
+          34,
+          52,
+          49,
+          54,
+          102,
+          51,
+          99,
+          51,
+          97,
+          52,
+          50,
+          49,
+          57,
+          101,
+          49,
+          53,
+          101,
+          51,
+          100,
+          55,
+          48,
+          101,
+          57,
+          99,
+          52,
+          48,
+          56,
+          53,
+          102,
+          97,
+          54,
+          97,
+          99,
+          57,
+          57,
+          97,
+          53,
+          49,
+          100,
+          102,
+          97,
+          53,
+          56,
+          49,
+          53,
+          48,
+          48,
+          53,
+          52,
+          101,
+          50,
+          54,
+          50,
+          97,
+          57,
+          101,
+          56,
+          56,
+          98,
+          52,
+          100,
+          99,
+          54,
+          98,
+          101,
+          34,
+          125
+        ],
+        "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[2,3,1,0],\\\"ranking_hash\\\":\\\"416f3c3a4219e15e3d70e9c4085fa6ac99a51dfa58150054e262a9e88b4dc6be\\\"}\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x70335913fec8445d800a0b68bbf15f1e764204c6b2bd9fa24aace419bb7cb1ed"
+    },
+    {
+      "hash": "0x2a1e18eb12e2faa6b0837bceea0bd641d3d03bee15dacb6655b947efa08970d2",
+      "method": "create_request",
+      "sender": "0x64F7F82113cA72582aE1B35DE4daA6545BCDF4B2",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          9
+        ],
+        "readable": "1"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x2a1e18eb12e2faa6b0837bceea0bd641d3d03bee15dacb6655b947efa08970d2"
+    },
+    {
+      "hash": "0x5616cd60eecbbe812bf26cac8feb4cfcea7537b8eb811f498ac4d0af95f33a34",
+      "method": "submit_quote",
+      "sender": "0xb73A984cBb9f49E390372953139fdf08e9fe122A",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          1
+        ],
+        "readable": "0"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x5616cd60eecbbe812bf26cac8feb4cfcea7537b8eb811f498ac4d0af95f33a34"
+    },
+    {
+      "hash": "0xa25069453da3ec87d55f6c33d58e983e12ae1aa021f768ccb7ad13f1c20ba634",
+      "method": "submit_quote",
+      "sender": "0x566434F7D0ae1dd6A1565D833463be1c3ed65241",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          9
+        ],
+        "readable": "1"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xa25069453da3ec87d55f6c33d58e983e12ae1aa021f768ccb7ad13f1c20ba634"
+    },
+    {
+      "hash": "0xe50f810a2b414e1b7122da9ca0415cb1860f5de6d9b2b0504416bbb3e4b3d14b",
+      "method": "evaluate_quote",
+      "sender": "0xb73A984cBb9f49E390372953139fdf08e9fe122A",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xe50f810a2b414e1b7122da9ca0415cb1860f5de6d9b2b0504416bbb3e4b3d14b"
+    },
+    {
+      "hash": "0x784289eb3e9a1db5c48a75389d35f846dfc6860c69591d6fe896ba82e8030bf6",
+      "method": "evaluate_quote",
+      "sender": "0x566434F7D0ae1dd6A1565D833463be1c3ed65241",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
+        ],
+        "readable": "\"qualified\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x784289eb3e9a1db5c48a75389d35f846dfc6860c69591d6fe896ba82e8030bf6"
+    },
+    {
+      "hash": "0xea92101c7bd2ff6ba9d2bb5f74cec7116fa98bc55c2398a82e2fa82769b4bbe9",
+      "method": "create_request",
+      "sender": "0x2c21D725448c27217969C88CE4f43F22792DE267",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          17
+        ],
+        "readable": "2"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xea92101c7bd2ff6ba9d2bb5f74cec7116fa98bc55c2398a82e2fa82769b4bbe9"
+    },
+    {
+      "hash": "0x548a901f505a2b44f18e04aa6af05553db8fdf6b64b779e989be22b5807e3069",
+      "method": "finalize_request",
+      "sender": "0x6294026a69ee2E275ac60A27CA4Cc2120DF5EC0F",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          180,
           7,
           123,
           34,
@@ -118,6 +747,8 @@
           58,
           91,
           48,
+          44,
+          49,
           93,
           44,
           34,
@@ -136,79 +767,104 @@
           34,
           58,
           34,
-          54,
-          102,
-          48,
-          101,
-          57,
-          48,
-          97,
-          54,
-          101,
-          51,
-          51,
-          49,
-          56,
-          97,
-          101,
-          48,
-          100,
-          49,
-          53,
-          99,
-          100,
-          54,
-          101,
-          56,
           52,
-          99,
-          53,
           102,
-          97,
+          51,
+          53,
           98,
-          98,
-          97,
-          50,
-          100,
-          97,
-          55,
           52,
-          49,
-          50,
-          99,
-          102,
-          49,
-          102,
+          51,
           53,
-          101,
-          54,
-          49,
-          99,
-          97,
-          54,
-          51,
-          51,
           48,
-          50,
-          53,
-          51,
-          98,
-          57,
-          49,
-          99,
           55,
           50,
+          56,
+          97,
+          56,
+          49,
+          48,
+          97,
+          54,
+          99,
+          57,
+          49,
+          54,
+          97,
+          102,
+          57,
+          53,
+          56,
+          101,
+          100,
+          50,
+          56,
+          50,
+          57,
+          55,
+          54,
+          102,
+          52,
+          53,
+          101,
+          50,
+          52,
+          57,
+          97,
+          102,
+          48,
+          101,
+          50,
+          50,
+          57,
+          48,
+          53,
+          48,
+          54,
+          102,
+          49,
+          97,
+          101,
+          55,
+          98,
+          54,
+          100,
           54,
           57,
+          98,
           34,
           125
         ],
-        "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[0],\\\"ranking_hash\\\":\\\"6f0e90a6e3318ae0d15cd6e84c5fabba2da7412cf1f5e61ca6330253b91c7269\\\"}\""
+        "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[0,1],\\\"ranking_hash\\\":\\\"4f35b4350728a810a6c916af958ed282976f45e249af0e2290506f1ae7b6d69b\\\"}\""
       },
-      "explorer": "https://explorer-studio.genlayer.com/tx/0x3bface4d5a2e6f8e16087ad448749fa0a303fafd4205ec6014f206496fb4c242"
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x548a901f505a2b44f18e04aa6af05553db8fdf6b64b779e989be22b5807e3069"
     },
     {
-      "hash": "0x78278a4ef170e02407921f62f70ed1352226ad46ce3868c621e3c244b79c30e5",
+      "hash": "0x3bc61c6f4f41c362a13f97aed4a1ee593f138afe30fb261d625371dfa209374b",
+      "method": "submit_quote",
+      "sender": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          1
+        ],
+        "readable": "0"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x3bc61c6f4f41c362a13f97aed4a1ee593f138afe30fb261d625371dfa209374b"
+    },
+    {
+      "hash": "0xec93ec9305e5221d183d4bd6401366e89a44a2f962d61027ff6837e013544bdb",
+      "method": "submit_quote",
+      "sender": "0x806Da6e785769F0Ee8edE708A69e4259eF2992C6",
+      "status": "FINALIZED",
+      "successful": false,
+      "execution": "document changed or incorrect hash",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xec93ec9305e5221d183d4bd6401366e89a44a2f962d61027ff6837e013544bdb"
+    },
+    {
+      "hash": "0xb3fadfaecb8618d22636b824c7646b8380ae68151f839c5e96adaefb5fd0ab13",
+      "method": "submit_quote",
+      "sender": "0x6294026a69ee2E275ac60A27CA4Cc2120DF5EC0F",
       "status": "FINALIZED",
       "successful": true,
       "execution": {
@@ -217,10 +873,26 @@
         ],
         "readable": "1"
       },
-      "explorer": "https://explorer-studio.genlayer.com/tx/0x78278a4ef170e02407921f62f70ed1352226ad46ce3868c621e3c244b79c30e5"
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xb3fadfaecb8618d22636b824c7646b8380ae68151f839c5e96adaefb5fd0ab13"
     },
     {
-      "hash": "0x7b811ab6fcc72f3c66bbe050dca6a840e05fad11f238ea0384ed967cc500ef91",
+      "hash": "0x628b066d3186e318f56a669b8fe33eb3da5b301473d4cde478ae2d1a470f6b13",
+      "method": "submit_quote",
+      "sender": "0x806Da6e785769F0Ee8edE708A69e4259eF2992C6",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          17
+        ],
+        "readable": "2"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x628b066d3186e318f56a669b8fe33eb3da5b301473d4cde478ae2d1a470f6b13"
+    },
+    {
+      "hash": "0x51d4730c4ff25d72a7542fb374e672cfb74ea18d1e29e818bc94619887d37bac",
+      "method": "evaluate_quote",
+      "sender": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
       "status": "FINALIZED",
       "successful": true,
       "execution": {
@@ -238,48 +910,283 @@
         ],
         "readable": "\"qualified\""
       },
-      "explorer": "https://explorer-studio.genlayer.com/tx/0x7b811ab6fcc72f3c66bbe050dca6a840e05fad11f238ea0384ed967cc500ef91"
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x51d4730c4ff25d72a7542fb374e672cfb74ea18d1e29e818bc94619887d37bac"
     },
     {
-      "hash": "0xb6ae34408aebecaa8397fec304b75a73dcc780c6e507cf3926041eb59a767dc4",
-      "status": "FINALIZED",
-      "successful": false,
-      "execution": "bidding closed",
-      "explorer": "https://explorer-studio.genlayer.com/tx/0xb6ae34408aebecaa8397fec304b75a73dcc780c6e507cf3926041eb59a767dc4"
-    },
-    {
-      "hash": "0xca741886a1673e08d5fd4464cb285c2163c50ac729b958455791362d5926f79f",
+      "hash": "0xb6039e7746e0d215ed47b64023ff627e8e42a87254a6a59797dc8bbaa81be44b",
+      "method": "evaluate_quote",
+      "sender": "0x6294026a69ee2E275ac60A27CA4Cc2120DF5EC0F",
       "status": "FINALIZED",
       "successful": true,
       "execution": {
         "raw": [
-          1
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
         ],
-        "readable": "0"
+        "readable": "\"qualified\""
       },
-      "explorer": "https://explorer-studio.genlayer.com/tx/0xca741886a1673e08d5fd4464cb285c2163c50ac729b958455791362d5926f79f"
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xb6039e7746e0d215ed47b64023ff627e8e42a87254a6a59797dc8bbaa81be44b"
     },
     {
-      "hash": "0xe124407bddd935701ef16fc6731f5046ac34bfaac16f9f78ea49bc4b79b94416",
+      "hash": "0x6d5a4b4ae394c660ce6c0c58bdd747b9d9db4152074963cba3339a30c52b8317",
+      "method": "evaluate_quote",
+      "sender": "0x806Da6e785769F0Ee8edE708A69e4259eF2992C6",
       "status": "FINALIZED",
       "successful": true,
       "execution": {
         "raw": [
-          1
+          76,
+          113,
+          117,
+          97,
+          108,
+          105,
+          102,
+          105,
+          101,
+          100
         ],
-        "readable": "0"
+        "readable": "\"qualified\""
       },
-      "explorer": "https://explorer-studio.genlayer.com/tx/0xe124407bddd935701ef16fc6731f5046ac34bfaac16f9f78ea49bc4b79b94416"
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x6d5a4b4ae394c660ce6c0c58bdd747b9d9db4152074963cba3339a30c52b8317"
+    },
+    {
+      "hash": "0xe1ce24b4595fd680f5c1a34eba4f4ddf9399d705bb97f6b845e5ca38095a0338",
+      "method": "submit_quote",
+      "sender": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          25
+        ],
+        "readable": "3"
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xe1ce24b4595fd680f5c1a34eba4f4ddf9399d705bb97f6b845e5ca38095a0338"
+    },
+    {
+      "hash": "0xba8086287df022df36e0fc32dccc49165e1d0411a367582da56795452010fc77",
+      "method": "evaluate_quote",
+      "sender": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          100,
+          105,
+          110,
+          99,
+          111,
+          110,
+          99,
+          108,
+          117,
+          115,
+          105,
+          118,
+          101
+        ],
+        "readable": "\"inconclusive\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xba8086287df022df36e0fc32dccc49165e1d0411a367582da56795452010fc77"
+    },
+    {
+      "hash": "0xc427d839fc360904e991df8a198de717c8755c2f83611a2d2ebcf1b1b523b9cb",
+      "method": "evaluate_quote",
+      "sender": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          100,
+          105,
+          110,
+          99,
+          111,
+          110,
+          99,
+          108,
+          117,
+          115,
+          105,
+          118,
+          101
+        ],
+        "readable": "\"inconclusive\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xc427d839fc360904e991df8a198de717c8755c2f83611a2d2ebcf1b1b523b9cb"
+    },
+    {
+      "hash": "0x676f5f159705b5c16d00079efdaf40b460452e0ee5a45c4860ffb545b8594be4",
+      "method": "evaluate_quote",
+      "sender": "0x0930A0a8a4C3413b889fAF6EF8C30149b9ed521f",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          100,
+          105,
+          110,
+          99,
+          111,
+          110,
+          99,
+          108,
+          117,
+          115,
+          105,
+          118,
+          101
+        ],
+        "readable": "\"inconclusive\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x676f5f159705b5c16d00079efdaf40b460452e0ee5a45c4860ffb545b8594be4"
+    },
+    {
+      "hash": "0xf2ac503a18b617dde36fb790e77389d7087a84404efbbd7bbc243fb2f376503c",
+      "method": "finalize_request",
+      "sender": "0x2c21D725448c27217969C88CE4f43F22792DE267",
+      "status": "FINALIZED",
+      "successful": true,
+      "execution": {
+        "raw": [
+          180,
+          7,
+          123,
+          34,
+          111,
+          117,
+          116,
+          99,
+          111,
+          109,
+          101,
+          34,
+          58,
+          34,
+          114,
+          97,
+          110,
+          107,
+          101,
+          100,
+          34,
+          44,
+          34,
+          114,
+          97,
+          110,
+          107,
+          105,
+          110,
+          103,
+          34,
+          58,
+          91,
+          50,
+          44,
+          49,
+          93,
+          44,
+          34,
+          114,
+          97,
+          110,
+          107,
+          105,
+          110,
+          103,
+          95,
+          104,
+          97,
+          115,
+          104,
+          34,
+          58,
+          34,
+          100,
+          48,
+          102,
+          50,
+          49,
+          51,
+          51,
+          54,
+          101,
+          48,
+          97,
+          52,
+          52,
+          101,
+          97,
+          56,
+          51,
+          99,
+          52,
+          51,
+          48,
+          55,
+          56,
+          97,
+          52,
+          98,
+          99,
+          101,
+          102,
+          97,
+          99,
+          100,
+          49,
+          57,
+          57,
+          51,
+          50,
+          50,
+          53,
+          56,
+          49,
+          97,
+          98,
+          98,
+          99,
+          101,
+          53,
+          51,
+          57,
+          55,
+          99,
+          52,
+          101,
+          51,
+          48,
+          97,
+          55,
+          102,
+          54,
+          102,
+          55,
+          50,
+          51,
+          55,
+          34,
+          125
+        ],
+        "readable": "\"{\\\"outcome\\\":\\\"ranked\\\",\\\"ranking\\\":[2,1],\\\"ranking_hash\\\":\\\"d0f21336e0a44ea83c43078a4bcefacd199322581abbce5397c4e30a7f6f7237\\\"}\""
+      },
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xf2ac503a18b617dde36fb790e77389d7087a84404efbbd7bbc243fb2f376503c"
     }
   ],
-  "testResults": {
-    "pythonContractTests": 15,
-    "nodeFrontendTests": 6,
-    "totalPassing": 21,
-    "productionBuild": "passed",
-    "browserVisualQA": "unavailable",
-    "sessionAccountFundingLiveTest": "blocked by automatic approval review; Studio built-in wallet used for authorized live run"
-  },
-  "lateBid": "Meridian transaction finalized with rollback: bidding closed. Not added to the request.",
-  "fixtureDisclosure": "Public quote documents are synthetic fictional supplier offers. Chain transactions and finalized contract state are real."
+  "limitations": [
+    "Malformed-model-output handling and 24-hour timeout use deterministic adversarial tests.",
+    "The initial ambiguous fixture was rejected, not inconclusive.",
+    "Mutable-source experiments returned unchanged committed bytes and qualified; they do not prove live source-change detection. Source-change handling passes deterministic tests."
+  ]
 }

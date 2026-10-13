@@ -30,3 +30,18 @@ test('supplier identity is explicitly unverified in table and inspection',async(
 test('revision two exposes immutable reserved supplier slots and new request roster',async()=>{const{dom,api}=await setup(false,true);assert.match(dom.window.document.querySelector('#board').textContent,/reserved slots/);api.createDialog();assert.ok(dom.window.document.querySelector('[name=suppliers]'));assert.match(dom.window.document.querySelector('#modal-content').textContent,/roster is immutable/)});
 test('legacy deployment preserves the original create ABI',async()=>{const{dom,api}=await setup();api.createDialog();assert.equal(dom.window.document.querySelector('[name=suppliers]'),null)});
 test('background artwork stays decorative and leaves the transaction mount present',async()=>{const html=await fs.readFile('index.html','utf8');const dom=new JSDOM(html);assert.equal(dom.window.document.querySelector('.background-scene').getAttribute('aria-hidden'),'true');assert.ok(dom.window.document.querySelector('#app'));assert.ok(dom.window.document.querySelector('#background-particles'));const css=await fs.readFile('src/style.css','utf8');assert.match(css,/prefers-reduced-motion:reduce/);assert.match(css,/pointer-events:none/)});
+
+
+test('archived qualified quotes retain history without a final rank',async()=>{
+ const original=structuredClone(request);
+ try{
+  request.closed=true;request.ranking=[1];
+  request.bids[0].superseded_by=1;
+  request.bids.push({...structuredClone(request.bids[0]),id:1,supplier:'Current',superseded_by:null});
+  const {dom}=await setup();
+  const rows=[...dom.window.document.querySelectorAll('tbody tr')];
+  assert.match(rows.find(r=>r.textContent.includes('Current')).textContent,/qualified · #1/);
+  const archived=rows.find(r=>r.textContent.includes('Atlas')).textContent;
+  assert.match(archived,/Superseded quote/);assert.doesNotMatch(archived,/#0|qualified · #/);
+ }finally{Object.assign(request,original)}
+});
