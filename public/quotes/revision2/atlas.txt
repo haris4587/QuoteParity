@@ -1,0 +1,8 @@
+QuoteParity revision 2 synthetic test fixture. Not a real supplier or purchase offer.
+Claimed supplier: Atlas. Company identity is unverified.
+Quantity: 10 NEW business laptops, each with 16 GB RAM and 512 GB SSD.
+Currency: USD. Unit price: 900.00 USD (90000 cents).
+Delivery fee total: 0 USD (0 cents). Warranty fee total: 0 USD (0 cents).
+Tax total: 0 USD (0 cents), expressly no tax charged. No additional charges.
+Delivery or collection duration: 7 days.
+Delivery to the buyer office within 7 days and a 24-month parts and labour warranty are included at no extra cost.

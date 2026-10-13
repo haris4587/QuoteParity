@@ -1,3 +1,5 @@
+> **2026-10-13 revision status:** The website is public. Supplier names are explicitly unverified claims. A prepared steward revision adds reserved invited-wallet slots, safe replacement and conservative malformed-model handling. It is **not deployed yet**, and the requested expanded live tests remain pending. See [STEWARD-REVISION.md](docs/STEWARD-REVISION.md). The app still uses the original contract and the download at `public/quote_parity.py` matches that source.
+
 # QuoteParity
 
 **Comparable supplier bids, with GenLayer verifying scope before deterministic cost ranking.**
