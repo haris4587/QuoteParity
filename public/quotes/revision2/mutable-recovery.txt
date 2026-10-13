@@ -6,3 +6,5 @@ Delivery fee total: 0 USD (0 cents). Warranty fee total: 0 USD (0 cents).
 Tax total: 0 USD (0 cents), expressly no tax charged. No additional charges.
 Delivery or collection duration: 7 days.
 Delivery to the buyer office within 7 days and a 24-month parts and labour warranty are included at no extra cost.
+
+Revision marker: content intentionally changed after the on-chain SHA-256 commitment for a live failure-handling test.
